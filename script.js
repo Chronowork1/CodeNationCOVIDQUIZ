@@ -1,1 +1,1 @@
-console.log("JSworks")
+console.log("JSworks");
