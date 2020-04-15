@@ -3,16 +3,28 @@
     font-size: 90px;
     opacity: 0.65;
     transition: 0.4s;
+    margin-top: calc(30vh - 45px);
+}
+#headerTitleSub{
+    font-family: 'Manrope', sans-serif;
+    font-size: 30px;
+    opacity: 0.65;
+    transition: 0.4s;
+    margin-top: 20px;
 }
 #headerTitle:hover{
     opacity:1;
 }
-#header{
+#headerTitleSub:hover{
+    opacity:1;
+}
+.text{
     display:flex;
     justify-content: center;
-    margin-top: calc(30vh - 45px);
+    text-shadow: 1px -1px #fff 1px 1px #fff -1px 1px #fff -1px -1px #fff;
+   
 }
 #homeHTML{
-    background-image: linear-gradient(rgb(230, 0, 0), rgb(230,146,0));
+    background-image: radial-gradient(rgb(230, 0, 0), rgb(255,165,0));
     height: 100vh;
 }
