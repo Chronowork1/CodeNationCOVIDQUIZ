@@ -7,13 +7,15 @@
     position: relative;
 }
 #headerTitleSub{
+    position: absolute;
     font-family: 'Text Me One', sans-serif;
     font-size: 30px;
     opacity: 0.65;
-    margin-top: 20px;
+    top: calc(30vh + 145px)
 }
 #headerTitle:hover{
     opacity:1;
+    font-size: 150px;
 }
 #headerTitle::after{
     content : "";
@@ -36,7 +38,7 @@
         display:flex;
         justify-content: center;
     }
-#homeHTML{
+.homeHTML{
     background-image: radial-gradient(rgb(230, 0, 0), rgb(255,165,0));
     height: 100vh;
 }
