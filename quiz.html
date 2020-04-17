@@ -3,12 +3,16 @@
     <head>
     <!-- both the CSS and JS are now connected to the html -->
         <link type="text/css" rel="stylesheet" href="style.css" />
-        <script src="script.js"></script>
+
+        <!-- Load React from CDN -->
+        <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
     </head>
     <body>
-        <h1>Hello Teams!</h1>
-        <p>Hi it's me Justin</p>
-        <p>I'm here to.</p>
-        <p>Test</p>
+        <p>Loaded</p>
+        <div id="root"></div>
+        
+        <!-- Load our React component. -->
+        <script src="App.js"></script>
     </body>
 </html>
