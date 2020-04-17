@@ -1,5 +1,11 @@
 'use strict';
 
+function Quiz(props) {
+    return (
+        <p>This is where the quiz goes!</p>
+    );
+}
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -11,10 +17,8 @@ class App extends React.Component {
       return 'You liked this.';
     }
 
-    return React.createElement(
-      'button',
-      { onClick: () => this.setState({ liked: true }) },
-      'Like'
+    return (
+        <Quiz/>
     );
   }
 }
