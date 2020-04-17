@@ -1,10 +1,10 @@
 export const Flowchart = [
     {
         question: "True of False, mask prevent contraction of covid.",
-        answers: [
-            "true",
-            "false"
-        ]
+        answers: [{
+            true: "true",
+            false: "false"
+        }]
     },
     {
         question: "What is the official name of the coronavirus?",
