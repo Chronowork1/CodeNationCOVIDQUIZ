@@ -71,12 +71,103 @@ var Object = [
 	    choices: ["Fit tightly but comfortably", "Include multiple layers of fabric", "Allow for breathing without restriction", "All of the above"]
     },
 
-    //here are thr true/false questions"
+    //here are the true/false questions"
     {
-        question: "The COVID-19 only seriously affects those above 60 years old",
+        question: "Essential oils can cure the COVID-19",
+        questionType: "trueFalse",
+	    answer: "false",
+        explanation: "There is currently no treatment or vaccine that is proven to be effective against COVID-19",
+	    choices: ["true", "false"]
+    },
+    {
+        question: "COVID-19 only seriously affects those above 60 years old",
         questionType: "trueFalse",
 	    answer: "false",
         explanation: "While older people are more susceptible to serious cases, people of all ages can develop dangerous  symptoms",
+	    choices: ["true", "false"]
+    },
+    {
+        question: "The first reported case of COVID-19 was in Wuhan, China",
+        questionType: "trueFalse",
+	    answer: "true",
+        explanation: "The novel coronavirus originated in Wuhan, China and subsequently spread",
+	    choices: ["true", "false"]
+    },
+    {
+        question: "The novel coronavirus is a virus so antibacterial soaps do nothing to it",
+        questionType: "trueFalse",
+	    answer: "false",
+        explanation: "while using antibacterial soaps does not have any benefits over regular hand soap, all soaps are effective against the virus because they attack the phospholipid bilayer that surrounds the virus",
+	    choices: ["true", "false"]
+    },
+    {
+        question: "China leads the world in reported COVID-19 cases",
+        questionType: "trueFalse",
+	    answer: "false",
+        explanation: "America has the most confirmed cases of the disease COVID-19, though there are suspicions that China and other countries are vastly underreporting their true number of cases",
+	    choices: ["true", "false"]
+    },
+    {
+        question: "Many people with COVID-19 are not aware that they have the disease",
+        questionType: "trueFalse",
+	    answer: "true",
+        explanation: "Estimates range from 25-50% of cases being asymptomatic",
+	    choices: ["true", "false"]
+    },
+    {
+        question: "You are not likely to die as a result of COVID-19",
+        questionType: "trueFalse",
+	    answer: "true",
+        explanation: "The estimated worldwide fatality rate is 1.4%",
+	    choices: ["true", "false"]
+    },
+    {
+        question: "The coronavirus has been confirmed as originating from bats",
+        questionType: "trueFalse",
+	    answer: "false",
+        explanation: "Although bats are currently the leading theory, it is not confirmed and another possible origin is pangolins",
+	    choices: ["true", "false"]
+    },
+    {
+        question: "The coronavirus cannot be spread via mosquitos and ticks",
+        questionType: "trueFalse",
+	    answer: "true",
+        explanation: "There is no evidence to suggest that the coronavirus can be spread through mosquitos and ticks, the only known way it can spread is through infected people",
+	    choices: ["true", "false"]
+    },
+    {
+        question: "Testing negative for the coronavirus means that you can never get it",
+        questionType: "trueFalse",
+	    answer: "false",
+        explanation: "Testing negative means that while you did not have the coronavirus at the time of testing, you could still get infected",
+	    choices: ["true", "false"]
+    },
+    {
+        question: "Living in areas with very hot climates reduces the risk of developing COVID-19 due to the heat damaging the virus",
+        questionType: "trueFalse",
+	    answer: "false",
+        explanation: "Neither hot nor cold weather affects the virus",
+	    choices: ["true", "false"]
+    },
+    {
+        question: "Being able to hold your breath for ten seconds without discomfort means that you do not have COVID-19",
+        questionType: "trueFalse",
+	    answer: "false",
+        explanation: "Being able to comfortably hold your breath does not indicate that you do not have COVID-19, the only way to be sure is to be tested by a medical professional",
+	    choices: ["true", "false"]
+    },
+    {
+        question: "Less than 1 in 4 people who have catch the coronavirus require hospitalization.",
+        questionType: "trueFalse",
+	    answer: "true",
+        explanation: "The WHO states that only about 1/5 of those with the coronavirus need hospital care due to most cases being mild",
+	    choices: ["true", "false"]
+    },
+    {
+        question: "Regularly spraying yourself with alcohol or chlorine cures COVID-19",
+        questionType: "trueFalse",
+	    answer: "false",
+        explanation: "While both alcohol and chlorine are disinfectants they are not able to kill viruses that are inside your body. Ingesting alcohol will also not harm the coronavirus",
 	    choices: ["true", "false"]
 	},
 ]
