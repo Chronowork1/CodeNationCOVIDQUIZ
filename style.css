@@ -70,6 +70,7 @@
 .answerChoices{
     width: 20%;
     height: 100%;
+    font-size: 200%;
 }
 
 #explanationLine{
@@ -86,4 +87,70 @@
 #nextLine{
     display: flex;
     justify-content: center;
+}
+
+/* End Screen */
+#gif{
+    display: flex;
+    justify-content: center;
+    height: 300px;
+}
+
+#giphy{
+    height: 90%;
+    width:  50%;
+}
+
+#totalScore{
+    display: flex;
+    justify-content: center;
+}
+
+#websites{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 5%;
+}
+
+#realNews{
+    display: block;
+    width: 50%;
+    border: 2px solid blue;
+    margin-right: 5%;
+    border-radius: 50%;
+    padding: 5%;
+}
+
+#fakeNews{
+    display: block;
+    width: 50%;
+    border: 2px solid red;
+    border-radius: 50%;
+    padding: 5%;
+
+    background-image: url("https://media2.giphy.com/media/3oKIPkHXpUP8lIO0AU/giphy.webp?cid=ecf05e47791030fa3957e2a073f5721edc6c4d9a4589e101&rid=giphy.webp");
+    background-repeat: no-repeat;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+li {
+    margin: 0 0 0.5em 0;
+}
+
+#some{
+    height: 150px;
+}
+
+#fire{
+    height: 100%;
+    width: 100%;
+    background-image: url("https://media1.giphy.com/media/8cjvqMVkSmfGE/giphy.webp?cid=ecf05e47791030fa3957e2a073f5721edc6c4d9a4589e101&rid=giphy.webp");
+    background-repeat: no-repeat;
 }
