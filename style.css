@@ -45,6 +45,10 @@
 }
 
 /* Quiz Screen */
+#quiz{
+    background-image: radial-gradient(rgb(230, 0, 0), rgb(255,165,0));
+    height: 100vh;
+}
 
 #scoreLine{
     display: flex;
@@ -71,6 +75,26 @@
     width: 20%;
     height: 100%;
     font-size: 200%;
+
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background: rgb(2,0,36);
+    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 27%, rgba(0,212,255,1) 75%);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
+
+.answerChoices:hover {
+    background-color: #3e8e41
+}
+
+.answerChoices:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 
 #explanationLine{
@@ -82,11 +106,24 @@
 #explanation{
     border: 2px solid black;
     padding: 25px;
+    max-width: 100%;
+    background-color: white;
 }
 
 #nextLine{
     display: flex;
     justify-content: center;
+    width: 100%;
+}
+
+#next{
+    background-image: url("https://media2.giphy.com/media/YPhuwt9pV2XLM2HIq4/giphy.webp?cid=ecf05e47c1f054a35eff8f55aa9c333bf91fb326cf13f61d&rid=giphy.webp");
+    background-repeat: no-repeat;
+    height: 250px;
+    width: 75%;
+
+    color: white;
+    font-size: 500%;
 }
 
 /* End Screen */
