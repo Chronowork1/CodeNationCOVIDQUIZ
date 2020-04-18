@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
     <!-- both the CSS and JS are now connected to the html -->
         <link type="text/css" rel="stylesheet" href="style.css" />
-        <script src="script.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        
     </head>
     <body>
         <div id=  "scoreLine">
@@ -13,16 +14,17 @@
             <h1 id= "question">Question</h1>
         </div>
         <div id= "answerLine">
-            <button class= "answerChoices">1</button>
-            <button class= "answerChoices">2</button>
-            <button class= "answerChoices">3</button>
-            <button class= "answerChoices">4</button>
+            <button class= "answerChoices" id="answer1" type="button"></button>
+            <button class= "answerChoices" id="answer2" type="button"></button>
+            <button class= "answerChoices" id="answer3" type="button"></button>
+            <button class= "answerChoices" id="answer4" type="button"></button>
         </div>
         <div id= "explanationLine">
-            <p id= "explanation">Explanation</p>
+            <p id= "explanation"></p>
         </div>
         <div id= "nextLine">
             <button id= "next">Next Page</button>
         </div>
+        <script src="script.js"></script>
     </body>
 </html>

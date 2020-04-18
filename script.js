@@ -1,11 +1,13 @@
-var Object = [ 
+$(document).ready(function(){
+
+var object = [ 
     //here are the mutiple choice questions
     {
 	    question : "The official name the novel coronavirus is:",
     	questionType: "multipleChoice",
 	    answer: "SARS-CoV-2",
         explanation: "The name ‘COVID-19’ refers to the disease caused by the virus SARS-CoV-2. Coronavirus is an informal name.",
-	    choices: ["COVID-19", "SARS-Cov-2", "Coronavirus", "None of the above"]
+	    choices: ["COVID-19", "SARS-CoV-2", "Coronavirus", "None of the above"]
     },
     {
 	    question : "The US state with the most cases of COVID-19 is:",
@@ -171,3 +173,56 @@ var Object = [
 	    choices: ["true", "false"]
 	},
 ]
+    let lastQuestion = object.length - 1;
+    let runningQuestion = 0;
+    let score = 0;
+    let currentQuestion = object[runningQuestion];
+
+    //Replaces question and answer towards the next page
+    function renderQuestion(){
+        $("#question").replaceWith("<h1 id='question'>"+q.question+"</h1>")
+        $("#answer1").replaceWith("<button class='answerChoices' id='answer1' type='button'>"+currentQuestion.choices[0]+"</button>");
+        $("#answer2").replaceWith("<button class='answerChoices' id='answer2' type='button'>"+currentQuestion.choices[1]+"</button>");
+        $("#answer3").replaceWith("<button class='answerChoices' id='answer3' type='button'>"+currentQuestion.choices[2]+"</button>");
+        $("#answer4").replaceWith("<button class='answerChoices' id='answer4' type='button'>"+currentQuestion.choices[3]+"</button>");
+    }
+
+    //Click individual button to move on and decide if its correct or not
+    $("#answer1").on("click", function(){
+        checkAnswer(currentQuestion.choices[1])
+    })
+    $("#answer2").on("click", function(){
+        checkAnswer(currentQuestion.choices[0])
+    })
+    $("#answer3").on("click", function(){
+        checkAnswer(currentQuestion.choices[2])
+    })
+    $("#answer4").on("click", function(){
+        checkAnswer(currentQuestion.choices[3])
+    })
+
+    function checkAnswer(answer){
+        if(answer == object[runningQuestion].answer){
+            score = score + 1
+            answerisCorrect();
+            runningQuestion = runningQuestion + 1;
+        }else{
+            answerisWrong();
+        }
+        if(runningQuestion < lastQuestion){
+            runningQuestion++;
+            renderQuestion();
+        }else{
+            alert("the game is over")
+        }
+    }
+
+    function answerisCorrect(){
+        alert("You got the correct answer.")
+    }
+
+    function answerisWrong(){
+        alert("you got the wrong answer.")
+    }
+
+})
