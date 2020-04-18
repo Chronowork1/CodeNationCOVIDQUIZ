@@ -186,7 +186,7 @@ var object = [
         $("#answer3").replaceWith("<button class='answerChoices' id='answer3' type='button'>"+currentQuestion.choices[2]+"</button>");
         $("#answer4").replaceWith("<button class='answerChoices' id='answer4' type='button'>"+currentQuestion.choices[3]+"</button>");
     }
-
+    
     //Click individual button to move on and decide if its correct or not
     $("#answer1").on("click", function(){
         checkAnswer(currentQuestion.choices[1])
