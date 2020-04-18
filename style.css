@@ -64,7 +64,12 @@
     text-decoration: underline;
 }
 
-#answerLine{
+#questionTypeLine{
+    display: flex;
+    justify-content: center;
+}
+
+.answerLine{
     display: flex;
     justify-content: space-around;
     height: 100px;
@@ -95,6 +100,22 @@
   background-color: #3e8e41;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
+}
+
+.answerChoices1{
+    width: 40%;
+    height: 100%;
+    font-size: 200%;
+
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background: rgb(2,0,36);
+    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 27%, rgba(0,212,255,1) 75%);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
 }
 
 #explanationLine{

@@ -180,13 +180,29 @@ var object = [
 
     //Replaces question and answer towards the next page
     function renderQuestion(){
+        $("#explanation").hide();
+        $("#next").hide();
         $("#question").replaceWith("<h1 id='question'>"+q.question+"</h1>")
-        $("#answer1").replaceWith("<button class='answerChoices' id='answer1' type='button'>"+currentQuestion.choices[0]+"</button>");
-        $("#answer2").replaceWith("<button class='answerChoices' id='answer2' type='button'>"+currentQuestion.choices[1]+"</button>");
-        $("#answer3").replaceWith("<button class='answerChoices' id='answer3' type='button'>"+currentQuestion.choices[2]+"</button>");
-        $("#answer4").replaceWith("<button class='answerChoices' id='answer4' type='button'>"+currentQuestion.choices[3]+"</button>");
-    }
+        if (currentQuestion.questionType == "multipleChoice"){
+            $("#answer5").hide();
+            $("#answer6").hide();
+            $("#answer1").replaceWith("<button class='answerChoices' id='answer1' type='button'>"+currentQuestion.choices[0]+"</button>");
+            $("#answer2").replaceWith("<button class='answerChoices' id='answer2' type='button'>"+currentQuestion.choices[1]+"</button>");
+            $("#answer3").replaceWith("<button class='answerChoices' id='answer3' type='button'>"+currentQuestion.choices[2]+"</button>");
+            $("#answer4").replaceWith("<button class='answerChoices' id='answer4' type='button'>"+currentQuestion.choices[3]+"</button>");
+        }else if(currentQuestion.questionType == "trueFalse"){
+            $("#answer1").hide();
+            $("#answer2").hide();
+            $("#answer3").hide();
+            $("#answer4").hide();
+            $("#answer5").replaceWith("<button class='answerChoices1' id='answer5' type='button'>"+currentQuestion.choices[0]+"</button>");
+            $("#answer6").replaceWith("<button class='answerChoices1' id='answer6' type='button'>"+currentQuestion.choices[1]+"</button>");
+        }
     
+        $("#score").replaceWith(`Score: ${score}`);
+        $("#Tscore").replaceWith(`You got ${score}/20 right!`);
+    }
+
     //Click individual button to move on and decide if its correct or not
     $("#answer1").on("click", function(){
         checkAnswer(currentQuestion.choices[1])
@@ -218,11 +234,15 @@ var object = [
     }
 
     function answerisCorrect(){
-        alert("You got the correct answer.")
+        alert("You got the correct answer.");
+        $("#explanation").show();
+        $("#next").show();
     }
 
     function answerisWrong(){
-        alert("you got the wrong answer.")
+        alert("you got the wrong answer.");
+        $("#explanation").show();
+        $("#next").show();
     }
 
 })
