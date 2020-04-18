@@ -1,3 +1,4 @@
+/* Title Screen */
 #headerTitle{
     font-family: 'Text Me One', sans-serif;
     font-size: 145px;
@@ -41,4 +42,48 @@
 .homeHTML{
     background-image: radial-gradient(rgb(230, 0, 0), rgb(255,165,0));
     height: 100vh;
+}
+
+/* Quiz Screen */
+
+#scoreLine{
+    display: flex;
+    justify-content: flex-end;
+}
+
+#questionLine{
+    display: flex;
+    justify-content: cen
+}
+
+#question{
+    text-decoration: underline;
+}
+
+#answerLine{
+    display: flex;
+    justify-content: space-around;
+    height: 100px;
+    margin-top: 8%;
+}
+
+.answerChoices{
+    width: 20%;
+    height: 100%;
+}
+
+#explanationLine{
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+#explanation{
+    border: 2px solid black;
+    padding: 25px;
+}
+
+#nextLine{
+    display: flex;
+    justify-content: center;
 }
