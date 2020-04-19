@@ -16,14 +16,14 @@ var object = [
 	    choices: ["California", "New York", "Texas", "Florida"]
     },
     {
-	    question : "The first US state with a confirmed case of COVID-19 is:",
+	    question : "The first US state with a confirmed case of COVID-19 was:",
     	questionType: "multipleChoice",
 	    answer: "Washington",
         explanation: "The first American resident confirmed to have COVID-19 lived in Snohomish County, Washington",
 	    choices: ["New York", "Virginia", "California", "Washington"]
     },
     {
-	    question : "Social distancing is maintaining minimum distance of ________ between people, as well as avoid groups or gatherings.",
+	    question : "Social distancing is maintaining minimum distance of ________ between people, as well as avoiding groups or gatherings.",
     	questionType: "multipleChoice",
 	    answer: "6 feet",
         explanation: "The name ‘COVID-19’ refers to the disease caused by the virus SARS-CoV-2. Coronavirus is an informal name.",
