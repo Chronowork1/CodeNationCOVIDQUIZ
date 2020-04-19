@@ -1,9 +1,9 @@
-$(document).ready(function(){
 
+$(document).ready(function(){
 var object = [ 
     //here are the mutiple choice questions
     {
-	    question : "The official name of the novel coronavirus is:",
+	    question : "The official name the novel coronavirus is:",
     	questionType: "multipleChoice",
 	    answer: "SARS-CoV-2",
         explanation: "The name ‘COVID-19’ refers to the disease caused by the virus SARS-CoV-2. Coronavirus is an informal name.",
@@ -17,14 +17,14 @@ var object = [
 	    choices: ["California", "New York", "Texas", "Florida"]
     },
     {
-	    question : "The first US state with a confirmed case of COVID-19 was:",
+	    question : "The first US state with a confirmed case of COVID-19 is:",
     	questionType: "multipleChoice",
 	    answer: "Washington",
         explanation: "The first American resident confirmed to have COVID-19 lived in Snohomish County, Washington",
 	    choices: ["New York", "Virginia", "California", "Washington"]
     },
     {
-	    question : "Social distancing is maintaining minimum distance of ________ between people, as well as avoiding groups or gatherings.",
+	    question : "Social distancing is maintaining minimum distance of ________ between people, as well as avoid groups or gatherings.",
     	questionType: "multipleChoice",
 	    answer: "6 feet",
         explanation: "The name ‘COVID-19’ refers to the disease caused by the virus SARS-CoV-2. Coronavirus is an informal name.",
@@ -75,7 +75,7 @@ var object = [
 
     //here are the true/false questions"
     {
-        question: "Essential oils can cure the COVID-19",
+        question: "Essential oils can cure COVID-19",
         questionType: "trueFalse",
 	    answer: "false",
         explanation: "There is currently no treatment or vaccine that is proven to be effective against COVID-19",
@@ -173,51 +173,56 @@ var object = [
 	    choices: ["true", "false"]
 	},
 ]
-    let lastQuestion = object.length - 1;
-    let runningQuestion = 0;
-    let score = 0;
-    let currentQuestion = object[runningQuestion];
-    let questionAnswered = False;
+var status = {
+    i : 0,
+    currentQuestion : {
 
-    $("#explanation").hide();
-    $("#next").hide();
+    },
+    clicked: false,
+    score : 0,
+}
+function q(){
+    status.clicked = false;
+    status.currentQuestion = object[status.i];
     //Replaces question and answer towards the next page
-    function renderQuestion(){
-        questionAnswered = False;
-        $("#explanation").hide();
-        $("#next").hide();
-        $("#question").replaceWith("<h1 id='question'>"+q.question+"</h1>")
-        if (currentQuestion.questionType == "multipleChoice"){
-            $("#answer5").hide();
-            $("#answer6").hide();
-            $("#answer1").replaceWith("<button class='answerChoices' id='answer1' type='button'>"+currentQuestion.choices[0]+"</button>");
-            $("#answer2").replaceWith("<button class='answerChoices' id='answer2' type='button'>"+currentQuestion.choices[1]+"</button>");
-            $("#answer3").replaceWith("<button class='answerChoices' id='answer3' type='button'>"+currentQuestion.choices[2]+"</button>");
-            $("#answer4").replaceWith("<button class='answerChoices' id='answer4' type='button'>"+currentQuestion.choices[3]+"</button>");
-        }else if(currentQuestion.questionType == "trueFalse"){
-            $("#answer1").hide();
-            $("#answer2").hide();
-            $("#answer3").hide();
-            $("#answer4").hide();
-            $("#answer5").replaceWith("<button class='answerChoices1' id='answer5' type='button'>"+currentQuestion.choices[0]+"</button>");
-            $("#answer6").replaceWith("<button class='answerChoices1' id='answer6' type='button'>"+currentQuestion.choices[1]+"</button>");
+    $("#qSpan").text(status.currentQuestion.question)
+    $("#btnA").text(status.currentQuestion.choices[0])
+    $("#btnB").text(status.currentQuestion.choices[1])
+    $("#btnC").text(status.currentQuestion.choices[2])
+    $("#btnD").text(status.currentQuestion.choices[3])
+}
+    $("#answer1").click(function(){
+        if(status.currentQuestion.answer === status.currentQuestion.choices[0] && status.clicked === false){
+            status.score +=1
+            $("#scoreSpan").text(status.score)
         }
-    
-        $("#Tscore").replaceWith(`You got ${score}/20 right!`);
-    }
-
-    //Click individual button to move on and decide if its correct or not
-    $("#answer1").on("click", function(){
-        checkAnswer(currentQuestion.choices[0])
+        if(status.clicked === false){
+            status.i = status.i+1
+            status.clicked = true;
+        }
+        $("#eSpan").text(status.currentQuestion.explanation)
     })
-    $("#answer2").on("click", function(){
-        checkAnswer(currentQuestion.choices[1])
+    $("#answer2").click(function(){
+        if(status.currentQuestion.answer === status.currentQuestion.choices[1] && status.clicked === false){
+            status.score +=1
+            $("#scoreSpan").text(status.score)
+        }
+        if(status.clicked === false){
+            status.i = status.i+1
+            status.clicked = true;
+        }
+        $("#eSpan").text(status.currentQuestion.explanation)
     })
-    $("#answer3").on("click", function(){
-        checkAnswer(currentQuestion.choices[2])
-    })
-    $("#answer4").on("click", function(){
-        checkAnswer(currentQuestion.choices[3])
+    $("#answer3").click(function(){
+        if(status.currentQuestion.answer === status.currentQuestion.choices[2] && status.clicked === false){
+            status.score +=1
+            $("#scoreSpan").text(status.score)
+        }
+        if(status.clicked === false){
+            status.i = status.i+1
+            status.clicked = true;
+        }
+        $("#eSpan").text(status.currentQuestion.explanation)
     })
     
     $("#next").click(function(){
