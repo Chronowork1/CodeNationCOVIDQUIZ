@@ -18,7 +18,7 @@ var object = [
 	    answer: "New York",
         explanation: "New York has more than 200,000 confirmed cases of COVID-19",
         website: "https://www.npr.org/sections/health-shots/2020/03/16/816707182/map-tracking-the-spread-of-the-coronavirus-in-the-u-s",
-        name: "Nation Public Radio",
+        name: "National Public Radio",
 	    choices: ["California", "New York", "Texas", "Florida"]
     },
     {
@@ -220,16 +220,20 @@ var object = [
         website: "https://www.globalhealthnow.org/2020-03/hold-quarantinis-alcohol-and-novel-coronavirus-might-not-mix",
         name: "Global Health Now",
 	    choices: ["true", "false"]
-	},
+    },
+    {
+        question: "",
+        questionType: "",
+	    answer: "",
+        explanation: "",
+        website: "",
+        name: "",
+        choices: ["", ""]
+    }
 ]
 
 $("#explanationLine").hide();
 $("#nextLine").hide();
-
-function externalLinks() { for(var c = document.getElementsByTagName("a"), a = 0;a < c.length;a++) { var b = c[a]; b.getAttribute("href") && b.hostname !== location.hostname && (b.target = "_blank") } } ;
-
-let append = 0;
-let points = 0;
 
 var status = {
     i : 0,
@@ -240,10 +244,13 @@ var status = {
     score : 0.5
 }
 
+function externalLinks() { for(var c = document.getElementsByTagName("a"), a = 0;a < c.length;a++) { var b = c[a]; b.getAttribute("href") && b.hostname !== location.hostname && (b.target = "_blank") } } ;
+
+let append = 0;
+
 function q(){
     status.clicked = false;
     status.currentQuestion = object[status.i];
-    $("#delete").html("");
     append = 0;
     //Replaces question and answer towards the next page
     $("#qSpan").text(status.currentQuestion.question)
@@ -289,7 +296,7 @@ function q(){
         let str = `${status.currentQuestion.name}`;
         let result = str.link(`${status.currentQuestion.website}`);
         if (append == 0){
-            $("#explanation").append(" <div id='delete'>" + result + "</div>");
+            $("#delete").append(" <div id='delete'>" + result + "</div>");
             externalLinks();
             append = 1;
         }
@@ -300,7 +307,6 @@ function q(){
             status.i = status.i+1 ;
             points += 1;
             status.clicked = true;
-            $("#TotalScoreSpan").text(status.points);
         }
         else if(status.clicked === false){
             status.i = status.i+1;
@@ -313,7 +319,7 @@ function q(){
         let str = `${status.currentQuestion.name}`;
         let result = str.link(`${status.currentQuestion.website}`);
         if (append == 0){
-            $("#explanation").append(" <div id='delete'>" + result + "</div>");
+            $("#delete").append(" <div id='delete'>" + result + "</div>");
             externalLinks();
             append = 1;
         }
@@ -335,7 +341,7 @@ function q(){
         let str = `${status.currentQuestion.name}`;
         let result = str.link(`${status.currentQuestion.website}`);
         if (append == 0){
-            $("#explanation").append(" <div id='delete'>" + result + "</div>");
+            $("#delete").append(" <div id='delete'>" + result + "</div>");
             externalLinks();
             append = 1;
         }
@@ -357,18 +363,17 @@ function q(){
         let str = `${status.currentQuestion.name}`;
         let result = str.link(`${status.currentQuestion.website}`);
         if (append == 0){
-            $("#explanation").append(" <div id='delete'>" + result + "</div>");
+            $("#delete").append(" <div id='delete'>" + result + "</div>");
             externalLinks();
             append = 1;
         }
+
 })
 
 $(".answerChoices").click(function(){
         status.clicked = true;
         $("#explanationLine").show();
         $("#nextLine").show();
-        $("#thing").html(status.points);
-        $("#totalScoreSpan").html(status.points);
     });
 
 q()
@@ -381,18 +386,13 @@ $("#next").click(function(){
     $("#btnD").text("")
     $("#explanationLine").hide();
     $("#nextLine").hide();
+    $("#delete").html(" ");
     q()
     status.clicked = false
-    if (status.i == 2){
+    if (status.i + 1 == object.length){
         window.location.href = "endScreen.html";
-        $("#totalScoreSpan").text(points);
     }
 })
-});
-
-$("#giphy").click(function(){
-    $("#end").html(points);
-});
 
 let rona = ["https://media3.giphy.com/media/Wt1C2c54Cwgkz2H9q5/giphy.webp?cid=ecf05e4729c60e56b9a6a6198bea85bd98b6bebca0b0c8d2&rid=giphy.webp",
 "https://media1.giphy.com/media/j2dbAdicfdwQ2Fj0Mw/200.webp?cid=ecf05e475450a66061bc4183213fe7dc00d8a576cc01109d&rid=200.webp",
@@ -420,3 +420,9 @@ setInterval(function(){
         image = 0;
     }
 },1500);
+
+var points = 0;
+
+
+});
+
