@@ -209,10 +209,10 @@ var object = [
 
     //Click individual button to move on and decide if its correct or not
     $("#answer1").on("click", function(){
-        checkAnswer(currentQuestion.choices[1])
+        checkAnswer(currentQuestion.choices[0])
     })
     $("#answer2").on("click", function(){
-        checkAnswer(currentQuestion.choices[0])
+        checkAnswer(currentQuestion.choices[1])
     })
     $("#answer3").on("click", function(){
         checkAnswer(currentQuestion.choices[2])
@@ -220,7 +220,7 @@ var object = [
     $("#answer4").on("click", function(){
         checkAnswer(currentQuestion.choices[3])
     })
-
+    
     function checkAnswer(answer){
         if(answer == object[runningQuestion].answer && questionAnswered == False){
             score = score + 1
