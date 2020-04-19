@@ -56,8 +56,10 @@
     justify-content: center;
 }
 
-#score{
+.score{
     font-size: 25px;
+    margin-right: 10%;
+    margin-left: 10%;
 }
 
 #questionLine{

@@ -9,6 +9,7 @@ var object = [
 	    answer: "SARS-CoV-2",
         explanation: "The name ‘COVID-19’ refers to the disease caused by the virus SARS-CoV-2. Coronavirus is an informal name.",
         website: "https://www.who.int/emergencies/diseases/novel-coronavirus-2019/technical-guidance/naming-the-coronavirus-disease-(covid-2019)-and-the-virus-that-causes-it",
+        name: "World Health Organization",
 	    choices: ["COVID-19", "SARS-CoV-2", "Coronavirus", "None of the above"]
     },
     {
@@ -16,6 +17,8 @@ var object = [
     	questionType: "multipleChoice",
 	    answer: "New York",
         explanation: "New York has more than 200,000 confirmed cases of COVID-19",
+        website: "https://www.npr.org/sections/health-shots/2020/03/16/816707182/map-tracking-the-spread-of-the-coronavirus-in-the-u-s",
+        name: "Nation Public Radio",
 	    choices: ["California", "New York", "Texas", "Florida"]
     },
     {
@@ -23,6 +26,8 @@ var object = [
     	questionType: "multipleChoice",
 	    answer: "Washington",
         explanation: "The first American resident confirmed to have COVID-19 lived in Snohomish County, Washington",
+        website: "https://www.doh.wa.gov/emergencies/coronavirus",
+        name: "Washington State Department of Health",
 	    choices: ["New York", "Virginia", "California", "Washington"]
     },
     {
@@ -30,6 +35,8 @@ var object = [
     	questionType: "multipleChoice",
 	    answer: "6 feet",
         explanation: "The CDC recommends staying a distance of 6 feet away from other people.",
+        website: "https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/social-distancing.html",
+        name: "Centers for Disease Control and Prevention",
 	    choices: ["10 feet", "5 feet", "6 feet", "4 feet"]
     },
     {
@@ -37,6 +44,8 @@ var object = [
     	questionType: "multipleChoice",
 	    answer: "Headache",
         explanation: "While all of these are potential symptoms, Shortness of breath, dry coughs, and fever, are all more common than headaches.",
+        website: "https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html",
+        name: "Centers for Disease Control and Prevention",
 	    choices: ["Shortness of breath", "Dry cough", "Fever", "Headache"]
     },
     {
@@ -44,6 +53,8 @@ var object = [
     	questionType: "multipleChoice",
 	    answer: "at least 20 seconds",
         explanation: "The CDC recommends washing your hands for at least 20 seconds after especially being in public or touching you face.",
+        website: "https://www.cdc.gov/handwashing/when-how-handwashing.html",
+        name: "Centers for Disease Control and Prevention",
 	    choices: ["at least 15 seconds", "at least 20 seconds", "at least 30 seconds", "as long as possible"]
     },
     {
@@ -51,6 +62,8 @@ var object = [
     	questionType: "multipleChoice",
 	    answer: "81%",
         explanation: "the CDC says that mild symptoms up to mild pneumonia constitute 81% of all cases.",
+        website: "https://www.washingtonpost.com/health/most-coronavirus-cases-are-mild-complicating-efforts-to-respond/2020/02/12/213603a4-4dc2-11ea-bf44-f5043eb3918a_story.html",
+        name: "The Washington Post",
 	    choices: ["81%", "50%", "9%", "38%"]
     },
     {
@@ -58,6 +71,8 @@ var object = [
     	questionType: "multipleChoice",
 	    answer: "5%",
         explanation: "The CDC says that critical cases, which involve shock, respiratory failure, or multiorgan system dysfunction, make up 5% of all COVID-19 cases.",
+        website: "https://www.ncbi.nlm.nih.gov/books/NBK554776/#article-52171.r12",
+        name: "National Center for Biotechnology Information",
 	    choices: ["19%", "7%", "5%", "4%"]
     },
     {
@@ -65,6 +80,8 @@ var object = [
     	questionType: "multipleChoice",
 	    answer: "10-13 days",
         explanation: "The CDC says that the median hospitalization length among survivors is 10 - 13 days.",
+        website: "https://www.cdc.gov/coronavirus/2019-ncov/hcp/clinical-guidance-management-patients.html",
+        name: "Centers for Disease Control and Prevention",
 	    choices: ["Not yet known", "3-4 weeks", "10-13 days", "5-7 days"]
     },
     {
@@ -72,6 +89,8 @@ var object = [
     	questionType: "multipleChoice",
 	    answer: "All of the above",
         explanation: "In addition to fitting snugly, including multiple layers of fabric and allowing unrestricted breathing, cloth face coverings should also be able to be washed without changing shape or damage.",
+        website: "https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/diy-cloth-face-coverings.html",
+        name: "Centers for Disease Control and Prevention",
 	    choices: ["Fit tightly but comfortably", "Include multiple layers of fabric", "Allow for breathing without restriction", "All of the above"]
     },
 
@@ -81,6 +100,8 @@ var object = [
         questionType: "trueFalse",
 	    answer: "false",
         explanation: "There is currently no treatment or vaccine that is proven to be effective against COVID-19",
+        website: "https://www.hopkinsmedicine.org/health/wellness-and-prevention/aromatherapy-do-essential-oils-really-work",
+        name: "John Hopkins Medicine",
 	    choices: ["true", "false"]
     },
     {
@@ -88,6 +109,8 @@ var object = [
         questionType: "trueFalse",
 	    answer: "false",
         explanation: "While older people are more susceptible to serious cases, people of all ages can develop dangerous  symptoms",
+        website: "https://www.statnews.com/2020/03/03/who-is-getting-sick-and-how-sick-a-breakdown-of-coronavirus-risk-by-demographic-factors/",
+        name: "Stat News",
 	    choices: ["true", "false"]
     },
     {
@@ -95,6 +118,8 @@ var object = [
         questionType: "trueFalse",
 	    answer: "true",
         explanation: "The novel coronavirus originated in Wuhan, China and subsequently spread",
+        website: "https://www.npr.org/2020/04/14/834109166/where-did-the-coronavirus-originate-virus-hunters-find-genetic-clues-in-bats",
+        name: "National Public Radio",
 	    choices: ["true", "false"]
     },
     {
@@ -102,6 +127,8 @@ var object = [
         questionType: "trueFalse",
 	    answer: "false",
         explanation: "while using antibacterial soaps does not have any benefits over regular hand soap, all soaps are effective against the virus because they attack the phospholipid bilayer that surrounds the virus",
+        website: "https://www.insider.com/does-antibacterial-soap-kill-germs",
+        name: "Insider",
 	    choices: ["true", "false"]
     },
     {
@@ -109,6 +136,8 @@ var object = [
         questionType: "trueFalse",
 	    answer: "false",
         explanation: "America has the most confirmed cases of the disease COVID-19, though there are suspicions that China and other countries are vastly underreporting their true number of cases",
+        website: "https://www.theguardian.com/world/2020/apr/18/coronavirus-world-map-which-countries-have-the-most-cases-and-deaths",
+        name: "The Guardian",
 	    choices: ["true", "false"]
     },
     {
@@ -116,13 +145,17 @@ var object = [
         questionType: "trueFalse",
 	    answer: "true",
         explanation: "Estimates range from 25-50% of cases being asymptomatic",
+        website: "https://www.healthline.com/health-news/50-percent-of-people-with-covid19-not-aware-have-virus",
+        name: "Health Line",
 	    choices: ["true", "false"]
     },
     {
         question: "You are not likely to die as a result of COVID-19",
         questionType: "trueFalse",
 	    answer: "true",
-        explanation: "The estimated worldwide fatality rate is 1.4%",
+        explanation: "The estimated worldwide fatality rate is 1.4%. Although, the chance of dying fluctuates depending on a variety of different factors such as age and underlying health.",
+        website: "https://www.bbc.com/news/health-51674743",
+        name: "BBC News",
 	    choices: ["true", "false"]
     },
     {
@@ -130,6 +163,8 @@ var object = [
         questionType: "trueFalse",
 	    answer: "false",
         explanation: "Although bats are currently the leading theory, it is not confirmed and another possible origin is pangolins",
+        website: "https://www.nature.com/articles/d41586-020-00548-w",
+        name: "Nature",
 	    choices: ["true", "false"]
     },
     {
@@ -137,6 +172,8 @@ var object = [
         questionType: "trueFalse",
 	    answer: "true",
         explanation: "There is no evidence to suggest that the coronavirus can be spread through mosquitos and ticks, the only known way it can spread is through infected people",
+        website: "https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public/myth-busters",
+        name: "World Health Organization",
 	    choices: ["true", "false"]
     },
     {
@@ -144,6 +181,8 @@ var object = [
         questionType: "trueFalse",
 	    answer: "false",
         explanation: "Testing negative means that while you did not have the coronavirus at the time of testing, you could still get infected",
+        website: "https://www.washingtonpost.com/science/2020/03/26/negative-coronavirus-test-result-doesnt-always-mean-you-arent-infected/",
+        name: "The Washington Post",
 	    choices: ["true", "false"]
     },
     {
@@ -151,6 +190,8 @@ var object = [
         questionType: "trueFalse",
 	    answer: "false",
         explanation: "Neither hot nor cold weather affects the virus",
+        website: "https://www.hsph.harvard.edu/c-change/news/coronavirus-climate-change-and-the-environment/",
+        name: "Harvard School of Public Health",
 	    choices: ["true", "false"]
     },
     {
@@ -158,6 +199,8 @@ var object = [
         questionType: "trueFalse",
 	    answer: "false",
         explanation: "Being able to comfortably hold your breath does not indicate that you do not have COVID-19, the only way to be sure is to be tested by a medical professional",
+        website: "https://www.usatoday.com/story/news/factcheck/2020/03/22/coronavirus-fact-check-your-holding-breath-test-covid-19/2891572001/",
+        name: "USA Today",
 	    choices: ["true", "false"]
     },
     {
@@ -165,6 +208,8 @@ var object = [
         questionType: "trueFalse",
 	    answer: "true",
         explanation: "The WHO states that only about 1/5 of those with the coronavirus need hospital care due to most cases being mild",
+        website: "https://www.cdc.gov/coronavirus/2019-ncov/hcp/clinical-guidance-management-patients.html",
+        name: "Center for Disease Control and Prevention",
 	    choices: ["true", "false"]
     },
     {
@@ -172,12 +217,18 @@ var object = [
         questionType: "trueFalse",
 	    answer: "false",
         explanation: "While both alcohol and chlorine are disinfectants they are not able to kill viruses that are inside your body. Ingesting alcohol will also not harm the coronavirus",
+        website: "https://www.globalhealthnow.org/2020-03/hold-quarantinis-alcohol-and-novel-coronavirus-might-not-mix",
+        name: "Global Health Now",
 	    choices: ["true", "false"]
 	},
 ]
 $("#explanationLine").hide();
 $("#nextLine").hide();
+
+function externalLinks() { for(var c = document.getElementsByTagName("a"), a = 0;a < c.length;a++) { var b = c[a]; b.getAttribute("href") && b.hostname !== location.hostname && (b.target = "_blank") } } ;
+
 let points = 0;
+let append = 0;
 
 var status = {
     i : 0,
@@ -190,6 +241,8 @@ var status = {
 function q(){
     status.clicked = false;
     status.currentQuestion = object[status.i];
+    $("#delete").html("");
+    append = 0;
     //Replaces question and answer towards the next page
     $("#qSpan").text(status.currentQuestion.question)
     $("#btnA").text(status.currentQuestion.choices[0])
@@ -231,7 +284,14 @@ function q(){
             $("#infectedSpan").text(Math.floor(status.score*66.66))
         }
         $("#eSpan").text(status.currentQuestion.explanation)
-        $("#explanation").append(`<a target='_blank' href=${status.currentQuestion.website}</a>`);
+        let str = `${status.currentQuestion.name}`;
+        let result = str.link(`${status.currentQuestion.website}`);
+        if (append == 0){
+            $("#explanation").append(" <div id='delete'>" + result + "</div>");
+            externalLinks();
+            append = 1;
+        }
+
     })
     $("#answer2").click(function(){
         if(status.currentQuestion.answer === status.currentQuestion.choices[1] && status.clicked === false){
@@ -247,7 +307,13 @@ function q(){
             $("#infectedSpan").text(Math.floor(status.score*66.66))
         }
         $("#eSpan").text(status.currentQuestion.explanation)
-        $("#explanation").append(`<a target='_blank' href=${status.currentQuestion.website}</a>`);
+        let str = `${status.currentQuestion.name}`;
+        let result = str.link(`${status.currentQuestion.website}`);
+        if (append == 0){
+            $("#explanation").append(" <div id='delete'>" + result + "</div>");
+            externalLinks();
+            append = 1;
+        }
     })
     $("#answer3").click(function(){
         if(status.currentQuestion.answer === status.currentQuestion.choices[2] && status.clicked === false){
@@ -263,7 +329,13 @@ function q(){
             $("#infectedSpan").text(Math.floor(status.score*66.66))
         }
         $("#eSpan").text(status.currentQuestion.explanation)
-        $("#explanation").append(`<a target='_blank' href=${status.currentQuestion.website}</a>`);
+        let str = `${status.currentQuestion.name}`;
+        let result = str.link(`${status.currentQuestion.website}`);
+        if (append == 0){
+            $("#explanation").append(" <div id='delete'>" + result + "</div>");
+            externalLinks();
+            append = 1;
+        }
     })
     $("#answer4").click(function(){
         if(status.currentQuestion.answer === status.currentQuestion.choices[3] && status.clicked === false){
@@ -279,7 +351,13 @@ function q(){
             $("#infectedSpan").text(Math.floor(status.score*66.66))
         }
         $("#eSpan").text(status.currentQuestion.explanation);
-        $("#explanation").append(`<a target='_blank' href=${status.currentQuestion.website}</a>`);
+        let str = `${status.currentQuestion.name}`;
+        let result = str.link(`${status.currentQuestion.website}`);
+        if (append == 0){
+            $("#explanation").append(" <div id='delete'>" + result + "</div>");
+            externalLinks();
+            append = 1;
+        }
 })
 
 $(".answerChoices").click(function(){
@@ -330,4 +408,3 @@ $("#next").click(function(){
 //         image = 0;
 //     }
 // },1000);
-
