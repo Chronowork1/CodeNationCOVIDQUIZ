@@ -203,7 +203,6 @@ var object = [
             $("#answer6").replaceWith("<button class='answerChoices1' id='answer6' type='button'>"+currentQuestion.choices[1]+"</button>");
         }
     
-        $("#score").replaceWith(`Score: ${score}`);
         $("#Tscore").replaceWith(`You got ${score}/20 right!`);
     }
 
@@ -221,6 +220,15 @@ var object = [
         checkAnswer(currentQuestion.choices[3])
     })
     
+    $("#next").click(function(){
+        if(runningQuestion < lastQuestion){
+            runningQuestion++;
+            renderQuestion();
+        }else{
+            alert("the game is over")
+        }
+    });
+    
     function checkAnswer(answer){
         if(answer == object[runningQuestion].answer && questionAnswered == False){
             score = score + 1
@@ -229,12 +237,6 @@ var object = [
             questionAnswered = True;
         }else if (answer != object[runningQuestion].answer) {
             answerisWrong();
-        }
-        if(runningQuestion < lastQuestion){
-            runningQuestion++;
-            renderQuestion();
-        }else{
-            alert("the game is over")
         }
     }
 

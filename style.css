@@ -143,7 +143,8 @@
 }
 
 #next{
-    /* background-image: url("https://media2.giphy.com/media/YPhuwt9pV2XLM2HIq4/giphy.webp?cid=ecf05e47c1f054a35eff8f55aa9c333bf91fb326cf13f61d&rid=giphy.webp"); */
+    /* background-image: url("https://media2.giphy.com/media/YPhuwt9pV2XLM2HIq4/giphy.webp?cid=ecf05e47c1f054a35eff8f55aa9c333bf91fb326cf13f61d&rid=giphy.webp");
+    background-repeat: no-repeat; */
     height: 125;
     width: 23%;
     border: none;
