@@ -229,6 +229,7 @@ $("#nextLine").hide();
 function externalLinks() { for(var c = document.getElementsByTagName("a"), a = 0;a < c.length;a++) { var b = c[a]; b.getAttribute("href") && b.hostname !== location.hostname && (b.target = "_blank") } } ;
 
 let append = 0;
+let points = 0;
 
 var status = {
     i : 0,
@@ -236,9 +237,9 @@ var status = {
 
     },
     clicked: false,
-    score : 0.5,
-    points: 0,
+    score : 0.5
 }
+
 function q(){
     status.clicked = false;
     status.currentQuestion = object[status.i];
@@ -274,7 +275,7 @@ function q(){
     $("#answer1").click(function(){
         if(status.currentQuestion.answer === status.currentQuestion.choices[0] && status.clicked === false){
             status.i = status.i+1
-            status.points = status.points + 1;
+            points += 1;
             status.clicked = true;
         }
         else if(status.clicked === false){
@@ -297,7 +298,7 @@ function q(){
     $("#answer2").click(function(){
         if(status.currentQuestion.answer === status.currentQuestion.choices[1] && status.clicked === false){
             status.i = status.i+1 ;
-            status.points = status.points + 1;
+            points += 1;
             status.clicked = true;
             $("#TotalScoreSpan").text(status.points);
         }
@@ -320,7 +321,7 @@ function q(){
     $("#answer3").click(function(){
         if(status.currentQuestion.answer === status.currentQuestion.choices[2] && status.clicked === false){
             status.i = status.i+1;
-            status.points = status.points + 1;
+            points += 1;
             status.clicked = true;
         }
         else if(status.clicked === false){
@@ -342,7 +343,7 @@ function q(){
     $("#answer4").click(function(){
         if(status.currentQuestion.answer === status.currentQuestion.choices[3] && status.clicked === false){
             status.i = status.i+1;
-            status.points = status.points + 1;
+            points += 1;
             status.clicked = true;
         }
         else if(status.clicked === false){
@@ -366,6 +367,8 @@ $(".answerChoices").click(function(){
         status.clicked = true;
         $("#explanationLine").show();
         $("#nextLine").show();
+        $("#thing").html(status.points);
+        $("#totalScoreSpan").html(status.points);
     });
 
 q()
@@ -382,14 +385,15 @@ $("#next").click(function(){
     status.clicked = false
     if (status.i == 2){
         window.location.href = "endScreen.html";
-        $("#totalScoreSpan").text(status.points);
-        
+        $("#totalScoreSpan").text(points);
     }
 })
 });
+
 $("#giphy").click(function(){
-    $("#totalScoreSpan").text(status.points);
+    $("#end").html(points);
 });
+
 let rona = ["https://media3.giphy.com/media/Wt1C2c54Cwgkz2H9q5/giphy.webp?cid=ecf05e4729c60e56b9a6a6198bea85bd98b6bebca0b0c8d2&rid=giphy.webp",
 "https://media1.giphy.com/media/j2dbAdicfdwQ2Fj0Mw/200.webp?cid=ecf05e475450a66061bc4183213fe7dc00d8a576cc01109d&rid=200.webp",
 "https://media1.giphy.com/media/YPhuwt9pV2XLM2HIq4/giphy.webp?cid=ecf05e475450a66061bc4183213fe7dc00d8a576cc01109d&rid=giphy.webp",
@@ -407,7 +411,6 @@ let rona = ["https://media3.giphy.com/media/Wt1C2c54Cwgkz2H9q5/giphy.webp?cid=ec
 
 let image = 0;
 
-
 setInterval(function(){
     let imageLink = rona[image];
     document.getElementById("giphy").src= imageLink;
@@ -416,4 +419,4 @@ setInterval(function(){
     } else {
         image = 0;
     }
-},2000);
+},1500);
