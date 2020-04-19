@@ -180,7 +180,7 @@ var status = {
 
     },
     clicked: false,
-    score : 0,
+    score : 0.5,
 }
 function q(){
     status.clicked = false;
@@ -194,45 +194,53 @@ function q(){
 }
     $("#answer1").click(function(){
         if(status.currentQuestion.answer === status.currentQuestion.choices[0] && status.clicked === false){
-            status.score +=1
-            $("#scoreSpan").text(status.score)
-        }
-        if(status.clicked === false){
             status.i = status.i+1
             status.clicked = true;
+        }
+        else if(status.clicked === false){
+            status.i = status.i+1
+            status.score *=2
+            status.clicked = true;
+            $("#scoreSpan").text(status.score)
         }
         $("#eSpan").text(status.currentQuestion.explanation)
     })
     $("#answer2").click(function(){
         if(status.currentQuestion.answer === status.currentQuestion.choices[1] && status.clicked === false){
-            status.score +=1
-            $("#scoreSpan").text(status.score)
-        }
-        if(status.clicked === false){
-            status.i = status.i+1
+            status.i = status.i+1  
             status.clicked = true;
+        }
+        else if(status.clicked === false){
+            status.i = status.i+1
+            status.score *=2
+            status.clicked = true;
+            $("#scoreSpan").text(status.score)
         }
         $("#eSpan").text(status.currentQuestion.explanation)
     })
     $("#answer3").click(function(){
         if(status.currentQuestion.answer === status.currentQuestion.choices[2] && status.clicked === false){
-            status.score +=1
-            $("#scoreSpan").text(status.score)
-        }
-        if(status.clicked === false){
             status.i = status.i+1
             status.clicked = true;
+        }
+        else if(status.clicked === false){
+            status.i = status.i+1
+            status.score *=2
+            status.clicked = true;
+            $("#scoreSpan").text(status.score)
         }
         $("#eSpan").text(status.currentQuestion.explanation)
     })
     $("#answer4").click(function(){
         if(status.currentQuestion.answer === status.currentQuestion.choices[3] && status.clicked === false){
-            status.score +=1
-            $("#scoreSpan").text(status.score)
-        }
-        if(status.clicked === false){
             status.i = status.i+1
             status.clicked = true;
+        }
+        else if(status.clicked === false){
+            status.i = status.i+1
+            status.score *= 2
+            status.clicked = true;
+            $("#scoreSpan").text(status.score)
         }
         $("#eSpan").text(status.currentQuestion.explanation)
     $(".answerChoices").click(function(){

@@ -149,7 +149,7 @@
     width: 30%;
     border: none;
     border-radius: 15px;
-    background-image: radial-gradient(rgb(50, 50, 50), rgb(10,10,10))
+    background-image: radial-gradient(rgb(50, 50, 50), rgb(10,10,10));
     box-shadow: 0 9px #222;
     color: white;
     font-size: 300%;
