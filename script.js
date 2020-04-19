@@ -8,6 +8,7 @@ var object = [
     	questionType: "multipleChoice",
 	    answer: "SARS-CoV-2",
         explanation: "The name ‘COVID-19’ refers to the disease caused by the virus SARS-CoV-2. Coronavirus is an informal name.",
+        website: "https://www.who.int/emergencies/diseases/novel-coronavirus-2019/technical-guidance/naming-the-coronavirus-disease-(covid-2019)-and-the-virus-that-causes-it",
 	    choices: ["COVID-19", "SARS-CoV-2", "Coronavirus", "None of the above"]
     },
     {
@@ -229,6 +230,7 @@ function q(){
             $("#scoreSpan").text(status.score)
         }
         $("#eSpan").text(status.currentQuestion.explanation)
+        $("#explanation").append(`<a target='_blank' href=${status.currentQuestion.website}</a>`);
     })
     $("#answer2").click(function(){
         if(status.currentQuestion.answer === status.currentQuestion.choices[1] && status.clicked === false){
@@ -243,6 +245,7 @@ function q(){
             $("#scoreSpan").text(status.score)
         }
         $("#eSpan").text(status.currentQuestion.explanation)
+        $("#explanation").append(`<a target='_blank' href=${status.currentQuestion.website}</a>`);
     })
     $("#answer3").click(function(){
         if(status.currentQuestion.answer === status.currentQuestion.choices[2] && status.clicked === false){
@@ -257,6 +260,7 @@ function q(){
             $("#scoreSpan").text(status.score)
         }
         $("#eSpan").text(status.currentQuestion.explanation)
+        $("#explanation").append(`<a target='_blank' href=${status.currentQuestion.website}</a>`);
     })
     $("#answer4").click(function(){
         if(status.currentQuestion.answer === status.currentQuestion.choices[3] && status.clicked === false){
@@ -270,7 +274,8 @@ function q(){
             status.clicked = true;
             $("#scoreSpan").text(status.score)
         }
-        $("#eSpan").text(status.currentQuestion.explanation)
+        $("#eSpan").text(status.currentQuestion.explanation);
+        $("#explanation").append(`<a target='_blank' href=${status.currentQuestion.website}</a>`);
 })
 
 $(".answerChoices").click(function(){
