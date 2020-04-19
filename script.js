@@ -4,7 +4,7 @@ var object = [
     //here are the mutiple choice questions
     //test
     {
-	    question : "The official name the novel coronavirus is:",
+	    question : "The official name of the novel coronavirus is:",
     	questionType: "multipleChoice",
 	    answer: "SARS-CoV-2",
         explanation: "The name ‘COVID-19’ refers to the disease caused by the virus SARS-CoV-2. Coronavirus is an informal name.",
@@ -174,6 +174,9 @@ var object = [
 	    choices: ["true", "false"]
 	},
 ]
+$("#explanationLine").hide();
+$("#nextLine").hide();
+
 var status = {
     i : 0,
     currentQuestion : {
@@ -191,6 +194,26 @@ function q(){
     $("#btnB").text(status.currentQuestion.choices[1])
     $("#btnC").text(status.currentQuestion.choices[2])
     $("#btnD").text(status.currentQuestion.choices[3])
+
+    if (status.currentQuestion.questionType == "multipleChoice"){
+        $("#answer1").show();
+        $("#answer2").show();
+        $("#answer3").show();
+        $("#answer4").show();
+        $("#answer1").css("height", "125px");
+        $("#answer1").css("font-size", "150%");
+        $("#answer2").css("height", "125px");
+        $("#answer3").css("font-size", "150%");
+    } else if(status.currentQuestion.questionType == "trueFalse"){
+        $("#answer1").show();
+        $("#answer2").show();
+        $("#answer3").hide();
+        $("#answer4").hide();
+        $("#answer1").css("height", "250px");
+        $("#answer1").css("font-size", "300%");
+        $("#answer2").css("height", "250px");
+        $("#answer2").css("font-size", "300%");
+    }
 }
     $("#answer1").click(function(){
         if(status.currentQuestion.answer === status.currentQuestion.choices[0] && status.clicked === false){
@@ -235,18 +258,25 @@ function q(){
             status.clicked = true;
         }
         $("#eSpan").text(status.currentQuestion.explanation)
-    $(".answerChoices").click(function(){
+})
+
+$(".answerChoices").click(function(){
         status.i = status.i+1
         status.clicked = true;
+        $("#explanationLine").show();
+        $("#nextLine").show();
     });
-})
+
 q()
+
 $("#next").click(function(){
     $("#eSpan").text("")
     $("#btnA").text("")
     $("#btnB").text("")
     $("#btnC").text("")
     $("#btnD").text("")
+    $("#explanationLine").hide();
+    $("#nextLine").hide();
     q()
     status.clicked = false
 })
@@ -278,3 +308,4 @@ $("#next").click(function(){
 //         image = 0;
 //     }
 // },1000);
+
