@@ -274,7 +274,6 @@ function q(){
 })
 
 $(".answerChoices").click(function(){
-        status.i = status.i+1
         status.clicked = true;
         $("#explanationLine").show();
         $("#nextLine").show();
