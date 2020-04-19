@@ -157,6 +157,12 @@
 }
 
 /* End Screen */
+
+#end{
+    background: rgb(2,0,36);
+    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(0,212,255,1) 0%, rgba(9,9,121,1) 92%);
+}
+
 #gif{
     display: flex;
     justify-content: center;
@@ -197,7 +203,8 @@
     padding: 5%;
 
     background-image: url("https://media2.giphy.com/media/3oKIPkHXpUP8lIO0AU/giphy.webp?cid=ecf05e47791030fa3957e2a073f5721edc6c4d9a4589e101&rid=giphy.webp");
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
+    background-position: center;
 }
 
 .title{
@@ -207,8 +214,22 @@
     font-weight: bold;
 }
 
+.title1{
+    font-size: 25px;
+}
+
 li {
     margin: 0 0 0.5em 0;
+    font-size: 20px;
+}
+
+.list{
+    display: flex;
+    justify-content: center;
+}
+
+a{
+    color: purple;
 }
 
 #some{
@@ -216,10 +237,13 @@ li {
 }
 
 #fire{
-    height: 100%;
+    height: 150%;
     width: 100%;
+
     background-image: url("https://media1.giphy.com/media/8cjvqMVkSmfGE/giphy.webp?cid=ecf05e47791030fa3957e2a073f5721edc6c4d9a4589e101&rid=giphy.webp");
     background-repeat: no-repeat;
+
+    background-position: center;
 }
 
 #hm{
@@ -229,6 +253,11 @@ li {
 
 #hmm{
     display: block;
+}
+
+#remember{
+    font-size: 15px;
+    color: white;
 }
 
 #good {

@@ -259,3 +259,30 @@ function q(){
     }
 
 })
+
+// let rona = ["https://media3.giphy.com/media/Wt1C2c54Cwgkz2H9q5/giphy.webp?cid=ecf05e4729c60e56b9a6a6198bea85bd98b6bebca0b0c8d2&rid=giphy.webp",
+// "https://media1.giphy.com/media/j2dbAdicfdwQ2Fj0Mw/200.webp?cid=ecf05e475450a66061bc4183213fe7dc00d8a576cc01109d&rid=200.webp",
+// "https://media1.giphy.com/media/YPhuwt9pV2XLM2HIq4/giphy.webp?cid=ecf05e475450a66061bc4183213fe7dc00d8a576cc01109d&rid=giphy.webp",
+// "https://media3.giphy.com/media/kgsBIWtPd5Q5Pw11Rq/giphy.webp?cid=ecf05e475450a66061bc4183213fe7dc00d8a576cc01109d&rid=giphy.webp",
+// "https://media2.giphy.com/media/VG24hSmLxgsDD0tV6k/giphy.webp?cid=ecf05e475450a66061bc4183213fe7dc00d8a576cc01109d&rid=giphy.webp",
+// "https://media1.giphy.com/media/WPubvqbeCsXIwhFtrB/giphy.webp?cid=ecf05e475450a66061bc4183213fe7dc00d8a576cc01109d&rid=giphy.webp",
+// "https://media0.giphy.com/media/IdHM0eoDSzssw8QLB1/200.webp?cid=ecf05e475f35e1b3d5526d0a22fa8618a907d88e423560b8&rid=200.webp",
+// "https://media1.giphy.com/media/JQ4vYsuzzmBEtssgm6/giphy.webp?cid=ecf05e475f35e1b3d5526d0a22fa8618a907d88e423560b8&rid=giphy.webp",
+// "https://media3.giphy.com/media/XepcmEMNavyHv1qe8u/giphy.webp?cid=ecf05e4768435eaa23c7f0e4c964cd1fa9d8c083c6971518&rid=giphy.webp",
+// "https://media0.giphy.com/media/MDZcrJILOJgK3UBD8Q/giphy.webp?cid=ecf05e4768435eaa23c7f0e4c964cd1fa9d8c083c6971518&rid=giphy.webp",
+// "https://media1.giphy.com/media/cMEvtBZOHnl3QuR9oC/giphy.webp?cid=ecf05e47b2a0667ad25efe4e613da0c1194395a716a12800&rid=giphy.webp",
+// "https://media1.giphy.com/media/Svphjt3E00gERwSLcR/giphy.webp?cid=ecf05e470af6d72ba2475d188d1b2ed827bf5bc21272f618&rid=giphy.webp",
+// "https://media0.giphy.com/media/YqEXVQT755oOmiSZj1/giphy.webp?cid=ecf05e47d4f796185a710c1ed35defc6fbfa665c71e9bc4e&rid=giphy.webp"
+// ];
+
+// let image = 0;
+
+// setInterval(function(){
+//     let imageLink = rona[image];
+//     document.getElementById("giphy").src= imageLink;
+//     if (image < rona.length - 1){
+//         image++;
+//     } else {
+//         image = 0;
+//     }
+// },1000);
