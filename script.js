@@ -230,6 +230,8 @@ $(document).ready(function() {
         }
     ]
 
+    $("#information").hide();
+
     $("#explanationLine").hide();
     $("#nextLine").hide();
 
@@ -398,10 +400,24 @@ $(document).ready(function() {
         $("#delete").html(" ");
         q()
         status.clicked = false
-        if (status.i + 1 == object.length) {
+        if (status.i + 1 == 2) {
             window.location.href = "endScreen.html";
         }
     })
+
+    $("#mission").click(function(){
+        $("#information").slideToggle();
+    });
+    
+    var $button = document.querySelector('#mission');
+        $button.addEventListener('click', function() {
+            var duration = 0.3,
+            delay = 0.08;
+            TweenMax.to($button, duration, {scaleY: 1.6, ease: Expo.easeOut});
+            TweenMax.to($button, duration, {scaleX: 1.2, scaleY: 1, ease: Back.easeOut, easeParams: [3], delay: delay});
+            TweenMax.to($button, duration * 1.25, {scaleX: 1, scaleY: 1, ease: Back.easeOut, easeParams: [6], delay: delay * 3 });
+});
+
     // Array of gifs
     let rona = ["https://media3.giphy.com/media/Wt1C2c54Cwgkz2H9q5/giphy.webp?cid=ecf05e4729c60e56b9a6a6198bea85bd98b6bebca0b0c8d2&rid=giphy.webp",
         "https://media1.giphy.com/media/j2dbAdicfdwQ2Fj0Mw/200.webp?cid=ecf05e475450a66061bc4183213fe7dc00d8a576cc01109d&rid=200.webp",

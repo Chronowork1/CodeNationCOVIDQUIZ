@@ -12,7 +12,7 @@
     font-family: 'Text Me One', sans-serif;
     font-size: 30px;
     opacity: 0.65;
-    top: calc(30vh + 145px)
+    top: calc(30vh + 145px);
 }
 #headerTitle:hover{
     opacity:1;
@@ -43,6 +43,43 @@
     background-image: radial-gradient(rgb(230, 0, 0), rgb(255,165,0));
     height: 100vh;
 }
+
+.homeButtons{
+    display: flex;
+    justify-content: center;
+
+    margin: 2%;
+}
+
+#information{
+    border: 2px solid black;
+    border-radius: 25%;
+    padding: 5%;
+    width: 75%;
+    height: 50%;
+
+    font-size: 20px;
+}
+
+#space{
+    margin-top: 10%;
+}
+
+#start{
+    width: 30%;
+    height: 100px;
+
+    background: red;
+}
+
+#mission{
+    width: 30%;
+    height: 100px;
+
+    background: #3498db;
+    padding: 4px 0;
+}
+
 
 /* Quiz Screen */
 
