@@ -186,11 +186,12 @@ function q(){
     status.clicked = false;
     status.currentQuestion = object[status.i];
     //Replaces question and answer towards the next page
-    $("#qSpan").text(status.currentQuestion.question)
-    $("#btnA").text(status.currentQuestion.choices[0])
-    $("#btnB").text(status.currentQuestion.choices[1])
-    $("#btnC").text(status.currentQuestion.choices[2])
-    $("#btnD").text(status.currentQuestion.choices[3])
+    $("#qSpan").text(status.currentQuestion.question);
+    $("#btnA").text(status.currentQuestion.choices[0]);
+    $("#btnB").text(status.currentQuestion.choices[1]);
+    $("#btnC").text(status.currentQuestion.choices[2]);
+    $("#btnD").text(status.currentQuestion.choices[3]);
+    $("#qT").text(status.currentQuestion.questiontype);
 }
     $("#answer1").click(function(){
         if(status.currentQuestion.answer === status.currentQuestion.choices[0] && status.clicked === false){
@@ -229,7 +230,6 @@ function q(){
     $("#next").click(function(){
         if(runningQuestion < lastQuestion){
             runningQuestion++;
-            renderQuestion();
         }else{
             alert("the game is over")
         }
