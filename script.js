@@ -2,6 +2,7 @@
 $(document).ready(function(){
 var object = [ 
     //here are the mutiple choice questions
+    //test
     {
 	    question : "The official name the novel coronavirus is:",
     	questionType: "multipleChoice",
