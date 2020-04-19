@@ -28,7 +28,7 @@ var object = [
 	    question : "Social distancing is maintaining minimum distance of ________ between people, as well as avoid groups or gatherings.",
     	questionType: "multipleChoice",
 	    answer: "6 feet",
-        explanation: "The name ‘COVID-19’ refers to the disease caused by the virus SARS-CoV-2. Coronavirus is an informal name.",
+        explanation: "The CDC recommends staying a distance of 6 feet away from other people.",
 	    choices: ["10 feet", "5 feet", "6 feet", "4 feet"]
     },
     {
@@ -62,15 +62,15 @@ var object = [
     {
 	    question : "The median length of hospitalization for COVID-19 is:",
     	questionType: "multipleChoice",
-	    answer: "SARS-CoV-2",
+	    answer: "10-13 days",
         explanation: "The CDC says that the median hospitalization length among survivors is 10 - 13 days.",
 	    choices: ["Not yet known", "3-4 weeks", "10-13 days", "5-7 days"]
     },
     {
 	    question : "Cloth face coverings should:",
     	questionType: "multipleChoice",
-	    answer: "In addition to fitting snugly, including multiple layers of fabric, and allowing unrestricted breathing, cloth face coverings should also be able to be washed without changing shape or damage.",
-        explanation: "The name ‘COVID-19’ refers to the disease caused by the virus SARS-CoV-2. Coronavirus is an informal name.",
+	    answer: "All of the above",
+        explanation: "In addition to fitting snugly, including multiple layers of fabric and allowing unrestricted breathing, cloth face coverings should also be able to be washed without changing shape or damage.",
 	    choices: ["Fit tightly but comfortably", "Include multiple layers of fabric", "Allow for breathing without restriction", "All of the above"]
     },
 
@@ -186,12 +186,11 @@ function q(){
     status.clicked = false;
     status.currentQuestion = object[status.i];
     //Replaces question and answer towards the next page
-    $("#qSpan").text(status.currentQuestion.question);
-    $("#btnA").text(status.currentQuestion.choices[0]);
-    $("#btnB").text(status.currentQuestion.choices[1]);
-    $("#btnC").text(status.currentQuestion.choices[2]);
-    $("#btnD").text(status.currentQuestion.choices[3]);
-    $("#qT").text(status.currentQuestion.questiontype);
+    $("#qSpan").text(status.currentQuestion.question)
+    $("#btnA").text(status.currentQuestion.choices[0])
+    $("#btnB").text(status.currentQuestion.choices[1])
+    $("#btnC").text(status.currentQuestion.choices[2])
+    $("#btnD").text(status.currentQuestion.choices[3])
 }
     $("#answer1").click(function(){
         if(status.currentQuestion.answer === status.currentQuestion.choices[0] && status.clicked === false){
@@ -226,38 +225,31 @@ function q(){
         }
         $("#eSpan").text(status.currentQuestion.explanation)
     })
-    
-    $("#next").click(function(){
-        if(runningQuestion < lastQuestion){
-            runningQuestion++;
-        }else{
-            alert("the game is over")
+    $("#answer4").click(function(){
+        if(status.currentQuestion.answer === status.currentQuestion.choices[3] && status.clicked === false){
+            status.score +=1
+            $("#scoreSpan").text(status.score)
         }
+        if(status.clicked === false){
+            status.i = status.i+1
+            status.clicked = true;
+        }
+        $("#eSpan").text(status.currentQuestion.explanation)
+    $(".answerChoices").click(function(){
+        status.i = status.i+1
+        status.clicked = true;
     });
-    
-    function checkAnswer(answer){
-        if(answer == object[runningQuestion].answer && questionAnswered == False){
-            score = score + 1
-            answerisCorrect();
-            runningQuestion = runningQuestion + 1;
-            questionAnswered = True;
-        }else if (answer != object[runningQuestion].answer) {
-            answerisWrong();
-        }
-    }
-
-    function answerisCorrect(){
-        alert("You got the correct answer.");
-        $("#explanation").show();
-        $("#next").show();
-    }
-
-    function answerisWrong(){
-        alert("you got the wrong answer.");
-        $("#explanation").show();
-        $("#next").show();
-    }
-
+})
+q()
+$("#next").click(function(){
+    $("#eSpan").text("")
+    $("#btnA").text("")
+    $("#btnB").text("")
+    $("#btnC").text("")
+    $("#btnD").text("")
+    q()
+    status.clicked = false
+})
 })
 
 // let rona = ["https://media3.giphy.com/media/Wt1C2c54Cwgkz2H9q5/giphy.webp?cid=ecf05e4729c60e56b9a6a6198bea85bd98b6bebca0b0c8d2&rid=giphy.webp",
