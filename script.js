@@ -228,6 +228,7 @@ function q(){
             status.score *=2
             status.clicked = true;
             $("#scoreSpan").text(status.score)
+            $("#infectedSpan").text(Math.floor(status.score*66.66))
         }
         $("#eSpan").text(status.currentQuestion.explanation)
         $("#explanation").append(`<a target='_blank' href=${status.currentQuestion.website}</a>`);
@@ -243,6 +244,7 @@ function q(){
             status.score *=2;
             status.clicked = true;
             $("#scoreSpan").text(status.score)
+            $("#infectedSpan").text(Math.floor(status.score*66.66))
         }
         $("#eSpan").text(status.currentQuestion.explanation)
         $("#explanation").append(`<a target='_blank' href=${status.currentQuestion.website}</a>`);
@@ -258,6 +260,7 @@ function q(){
             status.score *=2
             status.clicked = true;
             $("#scoreSpan").text(status.score)
+            $("#infectedSpan").text(Math.floor(status.score*66.66))
         }
         $("#eSpan").text(status.currentQuestion.explanation)
         $("#explanation").append(`<a target='_blank' href=${status.currentQuestion.website}</a>`);
@@ -273,6 +276,7 @@ function q(){
             status.score *= 2;
             status.clicked = true;
             $("#scoreSpan").text(status.score)
+            $("#infectedSpan").text(Math.floor(status.score*66.66))
         }
         $("#eSpan").text(status.currentQuestion.explanation);
         $("#explanation").append(`<a target='_blank' href=${status.currentQuestion.website}</a>`);
