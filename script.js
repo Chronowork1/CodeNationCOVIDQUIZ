@@ -400,7 +400,7 @@ $(document).ready(function() {
         $("#delete").html(" ");
         q()
         status.clicked = false
-        if (status.i + 1 == 2) {
+        if (status.i + 1 == object.length) {
             window.location.href = "endScreen.html";
         }
     })
@@ -408,7 +408,7 @@ $(document).ready(function() {
     $("#mission").click(function(){
         $("#information").slideToggle();
     });
-    
+
     var $button = document.querySelector('#mission');
         $button.addEventListener('click', function() {
             var duration = 0.3,
