@@ -1,37 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+
+<head>
     <!-- both the CSS and JS are now connected to the html -->
-        <link type="text/css" rel="stylesheet" href="style.css" />
-        <link href="https://fonts.googleapis.com/css2?family=Text+Me+One&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    </head>
-    <body id= "quiz">
-        <div id=  "scoreLine">
-            <p class= "score">Number of dead: <span id="scoreSpan" style="color:blue"> 0 </span></p>
-            <p class= "score">Number of infected: <span id="infectedSpan" style="color:green"> 0 </span>
+    <link type="text/css" rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Text+Me+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body id="quiz">
+    <div id="scoreLine">
+        <p class="score">Number of dead: <span id="scoreSpan" style="color:blue"> 0 </span></p>
+        <p class="score">Number of infected: <span id="infectedSpan" style="color:green"> 0 </span>
+    </div>
+    <div id="qL">
+        <div id="questionLine">
+            <h1 id="question"><span id="qSpan"></span></h1>
         </div>
-        <div id= "qL">
-        <div id= "questionLine">
-            <h1 id= "question"><span id="qSpan"></span></h1>
+        <div id="questionTypeLine">
         </div>
-        <div id= "questionTypeLine">
+        <div class="answerLine">
+            <button class="answerChoices" id="answer1" type="button"><span id="btnA"></span></button>
+            <button class="answerChoices" id="answer2" type="button"><span id="btnB"></span></button>
         </div>
-        <div class= "answerLine">
-            <button class= "answerChoices" id="answer1" type="button"><span id="btnA"></span></button>
-            <button class= "answerChoices" id="answer2" type="button"><span id="btnB"></span></button>
+        <div class="answerLine">
+            <button class="answerChoices" id="answer3" type="button"><span id="btnC"></span></button>
+            <button class="answerChoices" id="answer4" type="button"><span id="btnD"></span></button>
         </div>
-        <div class= "answerLine">
-            <button class= "answerChoices" id="answer3" type="button"><span id="btnC"></span></button>
-            <button class= "answerChoices" id="answer4" type="button"><span id="btnD"></span></button>
+        <div id="explanationLine">
+            <p id="explanation"><span id="eSpan"></span><span id="delete"></span></p>
         </div>
-        <div id= "explanationLine">
-            <p id= "explanation"><span id="eSpan"></span><span id= "delete"></span></p>
-        </div>
-        <div id= "nextLine">
-            <button id= "next">Next Question</button>
+        <div id="nextLine">
+            <button id="next">Next Question</button>
         </div>
         <script src="script.js"></script>
-    </body>
+</body>
+
 </html>

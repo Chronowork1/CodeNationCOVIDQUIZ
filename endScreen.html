@@ -1,74 +1,77 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link href="https://fonts.googleapis.com/css2?family=Text+Me+One&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
-        <link type="text/css" rel="stylesheet" href="style.css" />
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    </head>
-    <body id= "end">
-        <div id= "gif">
-            <img id= "giphy" src= "https://media0.giphy.com/media/YqEXVQT755oOmiSZj1/giphy.webp?cid=ecf05e47d4f796185a710c1ed35defc6fbfa665c71e9bc4e&rid=giphy.webp">
-        </div>
-        <div id= "totalScore">
-            <h1 id= "tScore"> </h1>
-        </div>
-        <div class= "share">
-            <p>Share the quiz and expose fake information about SARS-CoV-2.</p>
-        </div>
-        <div class= "share">
-            <a href="https://scadler.github.io/CodeNationCOVIDQUIZ/index.html">https://scadler.github.io/CodeNationCOVIDQUIZ/index.html</a>          
-        </div>
-        <div class= "share">
-            <li><img class= "logo" src="https://www.facebook.com/images/fb_icon_325x325.png"><a target="_blank" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fscadler.github.io%2FCodeNationCOVIDQUIZ%2Findex.html">Share on Facebook</a></li>
-            <li><img class= "logo" src="https://cfcdnpull-creativefreedoml.netdna-ssl.com/wp-content/uploads/2017/06/Twitter-featured.png"><a target="_blank" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fscadler.github.io%2FCodeNationCOVIDQUIZ%2Findex.html&text=Share%20the%20quiz%20and%20expose%20fake%20information%20about%20SARS-CoV-2.">Share on Twitter</a></li>
-        </div>
-        <div id= "websites">
-            <div id= "realNews">
-                <div class= "title">
-                    <p class= "title1">Real News</p>
-                </div>
-                <div class= "list">
-                    <ul>
-                        <li><a target="_blank" href= "https://www.cdc.gov/coronavirus/2019-ncov/index.html">Center for Disease Control and Prevention</a></li>
-                        <li><a target="_blank" href= "https://www.nih.gov/health-information/coronavirus">National Institute of Health</a></li>
-                        <li><a target="_blank" href= "https://www.who.int/emergencies/diseases/novel-coronavirus-2019">World Health Organization</a></li>
-                        <li><a target="_blank" href= "https://medlineplus.gov/coronavirusinfections.html">Medline Plus</a></li>
-                        <li><a target="_blank" href= "https://www.nhs.uk/conditions/wuhan-novel-coronavirus/">National Health Service</a></li>
-                        <li><a target="_blank" href= "https://www.google.com/covid19/">Google</a></li>
-                    </ul>
-                </div>
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Text+Me+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body id="end">
+    <div id="gif">
+        <img id="giphy" src="https://media0.giphy.com/media/YqEXVQT755oOmiSZj1/giphy.webp?cid=ecf05e47d4f796185a710c1ed35defc6fbfa665c71e9bc4e&rid=giphy.webp">
+    </div>
+    <div id="totalScore">
+        <h1 id="tScore"> </h1>
+    </div>
+    <div class="share">
+        <p>Share the quiz and expose fake information about SARS-CoV-2.</p>
+    </div>
+    <div class="share">
+        <a href="https://scadler.github.io/CodeNationCOVIDQUIZ/index.html">https://scadler.github.io/CodeNationCOVIDQUIZ/index.html</a>
+    </div>
+    <div class="share">
+        <li><img class="logo" src="https://www.facebook.com/images/fb_icon_325x325.png"><a target="_blank" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fscadler.github.io%2FCodeNationCOVIDQUIZ%2Findex.html">Share on Facebook</a></li>
+        <li><img class="logo" src="https://cfcdnpull-creativefreedoml.netdna-ssl.com/wp-content/uploads/2017/06/Twitter-featured.png"><a target="_blank" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fscadler.github.io%2FCodeNationCOVIDQUIZ%2Findex.html&text=Share%20the%20quiz%20and%20expose%20fake%20information%20about%20SARS-CoV-2.">Share on Twitter</a></li>
+    </div>
+    <div id="websites">
+        <div id="realNews">
+            <div class="title">
+                <p class="title1">Real News</p>
             </div>
-            <div id= "fakeNews">
-                <div class= "title">
-                    <p class= "title1">Fake News</p>
-                </div>
-                <div class= "list">
-                    <ul>
-                        <li><a target="_blank" href= "https://www.wnd.com/2020/01/hold-breath-coronavirus-coming/">WND</a></li>
-                        <li><a target="_blank" href= "https://www.americanthinker.com/blog/2020/01/exponential_coronavirus.html">AmericanThinker</a></li>
-                        <li><a target="_blank" href= "https://www.infowars.com/covid-19-is-a-man-made-virus-hiv-discoverer-says-could-only-have-been-created-in-a-lab/">Infowars</a></li>
-                        <li><a target="_blank" href= "https://humansarefree.com/2020/04/woody-harrelson-says-5g-may-be-tied-to-coronavirus-pandemic.html">Humansarefree</a></li>
-                        <li><a target="_blank" href= "https://techstartups.com/2020/04/18/professor-luc-montagnier-discovered-hiv-2008-nobel-prize-winner-medicine-says-coronavirus-man-made-virus-manipulated-hiv-research/">TechStartups</a></li>
-                        <li><a target="_blank" href= "https://www.foxnews.com/category/health/infectious-disease/coronavirus">Fox News</a></li>
-                    </ul>
-                </div>
-                <div id="some">
-                    <div id= "fire">
-                    </div>
-                </div>
+            <div class="list">
+                <ul>
+                    <li><a target="_blank" href="https://www.cdc.gov/coronavirus/2019-ncov/index.html">Center for Disease Control and Prevention</a></li>
+                    <li><a target="_blank" href="https://www.nih.gov/health-information/coronavirus">National Institute of Health</a></li>
+                    <li><a target="_blank" href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019">World Health Organization</a></li>
+                    <li><a target="_blank" href="https://medlineplus.gov/coronavirusinfections.html">Medline Plus</a></li>
+                    <li><a target="_blank" href="https://www.nhs.uk/conditions/wuhan-novel-coronavirus/">National Health Service</a></li>
+                    <li><a target="_blank" href="https://www.google.com/covid19/">Google</a></li>
+                </ul>
             </div>
         </div>
-        <div id= "hm">
-            <div id= "hmm">
-                <div id= "good">
-                    <a target="_blank" href= "https://www.newsguardtech.com/coronavirus-misinformation-tracking-center/">NewsGuardTech</a>
-                </div> 
-                <div>
-                    <p id= "remember">Use this website to check if a source is unreliable.</p>
+        <div id="fakeNews">
+            <div class="title">
+                <p class="title1">Fake News</p>
+            </div>
+            <div class="list">
+                <ul>
+                    <li><a target="_blank" href="https://www.wnd.com/2020/01/hold-breath-coronavirus-coming/">WND</a></li>
+                    <li><a target="_blank" href="https://www.americanthinker.com/blog/2020/01/exponential_coronavirus.html">AmericanThinker</a></li>
+                    <li><a target="_blank" href="https://www.infowars.com/covid-19-is-a-man-made-virus-hiv-discoverer-says-could-only-have-been-created-in-a-lab/">Infowars</a></li>
+                    <li><a target="_blank" href="https://humansarefree.com/2020/04/woody-harrelson-says-5g-may-be-tied-to-coronavirus-pandemic.html">Humansarefree</a></li>
+                    <li><a target="_blank" href="https://techstartups.com/2020/04/18/professor-luc-montagnier-discovered-hiv-2008-nobel-prize-winner-medicine-says-coronavirus-man-made-virus-manipulated-hiv-research/">TechStartups</a></li>
+                    <li><a target="_blank" href="https://www.foxnews.com/category/health/infectious-disease/coronavirus">Fox News</a></li>
+                </ul>
+            </div>
+            <div id="some">
+                <div id="fire">
                 </div>
             </div>
         </div>
-        <script src="script.js"></script>
-    </body>
+    </div>
+    <div id="hm">
+        <div id="hmm">
+            <div id="good">
+                <a target="_blank" href="https://www.newsguardtech.com/coronavirus-misinformation-tracking-center/">NewsGuardTech</a>
+            </div>
+            <div>
+                <p id="remember">Use this website to check if a source is unreliable.</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
 </html>
