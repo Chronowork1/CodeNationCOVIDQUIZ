@@ -222,12 +222,12 @@ var object = [
 	    choices: ["true", "false"]
 	},
 ]
+
 $("#explanationLine").hide();
 $("#nextLine").hide();
 
 function externalLinks() { for(var c = document.getElementsByTagName("a"), a = 0;a < c.length;a++) { var b = c[a]; b.getAttribute("href") && b.hostname !== location.hostname && (b.target = "_blank") } } ;
 
-let points = 0;
 let append = 0;
 
 var status = {
@@ -237,6 +237,7 @@ var status = {
     },
     clicked: false,
     score : 0.5,
+    points: 0,
 }
 function q(){
     status.clicked = false;
@@ -273,7 +274,7 @@ function q(){
     $("#answer1").click(function(){
         if(status.currentQuestion.answer === status.currentQuestion.choices[0] && status.clicked === false){
             status.i = status.i+1
-            points += 1;
+            status.points = status.points + 1;
             status.clicked = true;
         }
         else if(status.clicked === false){
@@ -296,8 +297,9 @@ function q(){
     $("#answer2").click(function(){
         if(status.currentQuestion.answer === status.currentQuestion.choices[1] && status.clicked === false){
             status.i = status.i+1 ;
-            points += 1;
+            status.points = status.points + 1;
             status.clicked = true;
+            $("#TotalScoreSpan").text(status.points);
         }
         else if(status.clicked === false){
             status.i = status.i+1;
@@ -318,7 +320,7 @@ function q(){
     $("#answer3").click(function(){
         if(status.currentQuestion.answer === status.currentQuestion.choices[2] && status.clicked === false){
             status.i = status.i+1;
-            points += 1;
+            status.points = status.points + 1;
             status.clicked = true;
         }
         else if(status.clicked === false){
@@ -340,7 +342,7 @@ function q(){
     $("#answer4").click(function(){
         if(status.currentQuestion.answer === status.currentQuestion.choices[3] && status.clicked === false){
             status.i = status.i+1;
-            points += 1;
+            status.points = status.points + 1;
             status.clicked = true;
         }
         else if(status.clicked === false){
@@ -378,33 +380,40 @@ $("#next").click(function(){
     $("#nextLine").hide();
     q()
     status.clicked = false
-    $("#totalScoreSpan").text(points);
+    if (status.i == 2){
+        window.location.href = "endScreen.html";
+        $("#totalScoreSpan").text(status.points);
+        
+    }
 })
-})
+});
+$("#giphy").click(function(){
+    $("#totalScoreSpan").text(status.points);
+});
+let rona = ["https://media3.giphy.com/media/Wt1C2c54Cwgkz2H9q5/giphy.webp?cid=ecf05e4729c60e56b9a6a6198bea85bd98b6bebca0b0c8d2&rid=giphy.webp",
+"https://media1.giphy.com/media/j2dbAdicfdwQ2Fj0Mw/200.webp?cid=ecf05e475450a66061bc4183213fe7dc00d8a576cc01109d&rid=200.webp",
+"https://media1.giphy.com/media/YPhuwt9pV2XLM2HIq4/giphy.webp?cid=ecf05e475450a66061bc4183213fe7dc00d8a576cc01109d&rid=giphy.webp",
+"https://media3.giphy.com/media/kgsBIWtPd5Q5Pw11Rq/giphy.webp?cid=ecf05e475450a66061bc4183213fe7dc00d8a576cc01109d&rid=giphy.webp",
+"https://media2.giphy.com/media/VG24hSmLxgsDD0tV6k/giphy.webp?cid=ecf05e475450a66061bc4183213fe7dc00d8a576cc01109d&rid=giphy.webp",
+"https://media1.giphy.com/media/WPubvqbeCsXIwhFtrB/giphy.webp?cid=ecf05e475450a66061bc4183213fe7dc00d8a576cc01109d&rid=giphy.webp",
+"https://media0.giphy.com/media/IdHM0eoDSzssw8QLB1/200.webp?cid=ecf05e475f35e1b3d5526d0a22fa8618a907d88e423560b8&rid=200.webp",
+"https://media1.giphy.com/media/JQ4vYsuzzmBEtssgm6/giphy.webp?cid=ecf05e475f35e1b3d5526d0a22fa8618a907d88e423560b8&rid=giphy.webp",
+"https://media3.giphy.com/media/XepcmEMNavyHv1qe8u/giphy.webp?cid=ecf05e4768435eaa23c7f0e4c964cd1fa9d8c083c6971518&rid=giphy.webp",
+"https://media0.giphy.com/media/MDZcrJILOJgK3UBD8Q/giphy.webp?cid=ecf05e4768435eaa23c7f0e4c964cd1fa9d8c083c6971518&rid=giphy.webp",
+"https://media1.giphy.com/media/cMEvtBZOHnl3QuR9oC/giphy.webp?cid=ecf05e47b2a0667ad25efe4e613da0c1194395a716a12800&rid=giphy.webp",
+"https://media1.giphy.com/media/Svphjt3E00gERwSLcR/giphy.webp?cid=ecf05e470af6d72ba2475d188d1b2ed827bf5bc21272f618&rid=giphy.webp",
+"https://media0.giphy.com/media/YqEXVQT755oOmiSZj1/giphy.webp?cid=ecf05e47d4f796185a710c1ed35defc6fbfa665c71e9bc4e&rid=giphy.webp"
+];
 
-// let rona = ["https://media3.giphy.com/media/Wt1C2c54Cwgkz2H9q5/giphy.webp?cid=ecf05e4729c60e56b9a6a6198bea85bd98b6bebca0b0c8d2&rid=giphy.webp",
-// "https://media1.giphy.com/media/j2dbAdicfdwQ2Fj0Mw/200.webp?cid=ecf05e475450a66061bc4183213fe7dc00d8a576cc01109d&rid=200.webp",
-// "https://media1.giphy.com/media/YPhuwt9pV2XLM2HIq4/giphy.webp?cid=ecf05e475450a66061bc4183213fe7dc00d8a576cc01109d&rid=giphy.webp",
-// "https://media3.giphy.com/media/kgsBIWtPd5Q5Pw11Rq/giphy.webp?cid=ecf05e475450a66061bc4183213fe7dc00d8a576cc01109d&rid=giphy.webp",
-// "https://media2.giphy.com/media/VG24hSmLxgsDD0tV6k/giphy.webp?cid=ecf05e475450a66061bc4183213fe7dc00d8a576cc01109d&rid=giphy.webp",
-// "https://media1.giphy.com/media/WPubvqbeCsXIwhFtrB/giphy.webp?cid=ecf05e475450a66061bc4183213fe7dc00d8a576cc01109d&rid=giphy.webp",
-// "https://media0.giphy.com/media/IdHM0eoDSzssw8QLB1/200.webp?cid=ecf05e475f35e1b3d5526d0a22fa8618a907d88e423560b8&rid=200.webp",
-// "https://media1.giphy.com/media/JQ4vYsuzzmBEtssgm6/giphy.webp?cid=ecf05e475f35e1b3d5526d0a22fa8618a907d88e423560b8&rid=giphy.webp",
-// "https://media3.giphy.com/media/XepcmEMNavyHv1qe8u/giphy.webp?cid=ecf05e4768435eaa23c7f0e4c964cd1fa9d8c083c6971518&rid=giphy.webp",
-// "https://media0.giphy.com/media/MDZcrJILOJgK3UBD8Q/giphy.webp?cid=ecf05e4768435eaa23c7f0e4c964cd1fa9d8c083c6971518&rid=giphy.webp",
-// "https://media1.giphy.com/media/cMEvtBZOHnl3QuR9oC/giphy.webp?cid=ecf05e47b2a0667ad25efe4e613da0c1194395a716a12800&rid=giphy.webp",
-// "https://media1.giphy.com/media/Svphjt3E00gERwSLcR/giphy.webp?cid=ecf05e470af6d72ba2475d188d1b2ed827bf5bc21272f618&rid=giphy.webp",
-// "https://media0.giphy.com/media/YqEXVQT755oOmiSZj1/giphy.webp?cid=ecf05e47d4f796185a710c1ed35defc6fbfa665c71e9bc4e&rid=giphy.webp"
-// ];
+let image = 0;
 
-// let image = 0;
 
-// setInterval(function(){
-//     let imageLink = rona[image];
-//     document.getElementById("giphy").src= imageLink;
-//     if (image < rona.length - 1){
-//         image++;
-//     } else {
-//         image = 0;
-//     }
-// },1000);
+setInterval(function(){
+    let imageLink = rona[image];
+    document.getElementById("giphy").src= imageLink;
+    if (image < rona.length - 1){
+        image++;
+    } else {
+        image = 0;
+    }
+},2000);
