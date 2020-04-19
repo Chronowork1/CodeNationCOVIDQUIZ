@@ -45,6 +45,7 @@
 }
 
 /* Quiz Screen */
+
 #quiz{
     background-image: radial-gradient(rgb(230, 0, 0), rgb(255,165,0));
     height: 100vh;
@@ -113,7 +114,7 @@
     outline: none;
     color: #fff;
     background: rgb(2,0,36);
-    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 27%, rgba(0,212,255,1) 75%);
+    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(0,212,255,1) 0%, rgba(9,9,121,1) 92%);
     border: none;
     border-radius: 15px;
     box-shadow: 0 9px #999;
