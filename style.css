@@ -1,7 +1,7 @@
 /* Title Screen */
 #headerTitle{
     font-family: 'Text Me One', sans-serif;
-    font-size: 145px;
+    font-size: 140px;
     opacity: 0.65;
     transition: 0.4s;
     margin-top: calc(30vh - 45px);
@@ -16,7 +16,7 @@
 }
 #headerTitle:hover{
     opacity:1;
-    font-size: 150px;
+    font-size: 145px;
 }
 #headerTitle::after{
     content : "";
