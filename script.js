@@ -176,6 +176,7 @@ var object = [
 ]
 $("#explanationLine").hide();
 $("#nextLine").hide();
+let points = 0;
 
 var status = {
     i : 0,
@@ -218,6 +219,7 @@ function q(){
     $("#answer1").click(function(){
         if(status.currentQuestion.answer === status.currentQuestion.choices[0] && status.clicked === false){
             status.i = status.i+1
+            points += 1;
             status.clicked = true;
         }
         else if(status.clicked === false){
@@ -230,12 +232,13 @@ function q(){
     })
     $("#answer2").click(function(){
         if(status.currentQuestion.answer === status.currentQuestion.choices[1] && status.clicked === false){
-            status.i = status.i+1  
+            status.i = status.i+1 ;
+            points += 1;
             status.clicked = true;
         }
         else if(status.clicked === false){
-            status.i = status.i+1
-            status.score *=2
+            status.i = status.i+1;
+            status.score *=2;
             status.clicked = true;
             $("#scoreSpan").text(status.score)
         }
@@ -243,7 +246,8 @@ function q(){
     })
     $("#answer3").click(function(){
         if(status.currentQuestion.answer === status.currentQuestion.choices[2] && status.clicked === false){
-            status.i = status.i+1
+            status.i = status.i+1;
+            points += 1;
             status.clicked = true;
         }
         else if(status.clicked === false){
@@ -256,12 +260,13 @@ function q(){
     })
     $("#answer4").click(function(){
         if(status.currentQuestion.answer === status.currentQuestion.choices[3] && status.clicked === false){
-            status.i = status.i+1
+            status.i = status.i+1;
+            points += 1;
             status.clicked = true;
         }
         else if(status.clicked === false){
-            status.i = status.i+1
-            status.score *= 2
+            status.i = status.i+1;
+            status.score *= 2;
             status.clicked = true;
             $("#scoreSpan").text(status.score)
         }
@@ -287,6 +292,7 @@ $("#next").click(function(){
     $("#nextLine").hide();
     q()
     status.clicked = false
+    $("#totalScoreSpan").text(points);
 })
 })
 
