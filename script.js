@@ -287,9 +287,10 @@ $(document).ready(function() {
             $("#answer2").css("font-size", "300%");
         }
     }
-    $("#answer1").click(function() {
+    
+    function checkAnswer(number){
         // Check if answer is correct and if an answer choice was already clicked
-        if (status.currentQuestion.answer === status.currentQuestion.choices[0] && status.clicked === false) {
+        if (status.currentQuestion.answer === status.currentQuestion.choices[number] && status.clicked === false) {
             status.i = status.i + 1
             points += 1;
             status.clicked = true;
@@ -313,72 +314,23 @@ $(document).ready(function() {
             $("#delete").append(" <div id='delete'>" + result + "</div>");
             externalLinks();
             append = 1;
-        }
-
+        }        
+    });
+    
+    $("#answer1").click(function() {
+        checkAnswer(0)
     })
+    
     $("#answer2").click(function() {
-        if (status.currentQuestion.answer === status.currentQuestion.choices[1] && status.clicked === false) {
-            status.i = status.i + 1;
-            points += 1;
-            status.clicked = true;
-        } else if (status.clicked === false) {
-            status.i = status.i + 1;
-            status.score *= 2;
-            status.clicked = true;
-            $("#scoreSpan").text(status.score)
-            $("#infectedSpan").text(Math.floor(status.score * 66.66))
-        }
-        $("#eSpan").text(status.currentQuestion.explanation)
-        let str = `${status.currentQuestion.name}`;
-        let result = str.link(`${status.currentQuestion.website}`);
-        if (append == 0) {
-            $("#delete").append(" <div id='delete'>" + result + "</div>");
-            externalLinks();
-            append = 1;
-        }
+        checkAnswer(1)
     })
-    $("#answer3").click(function() {
-        if (status.currentQuestion.answer === status.currentQuestion.choices[2] && status.clicked === false) {
-            status.i = status.i + 1;
-            points += 1;
-            status.clicked = true;
-        } else if (status.clicked === false) {
-            status.i = status.i + 1
-            status.score *= 2
-            status.clicked = true;
-            $("#scoreSpan").text(status.score)
-            $("#infectedSpan").text(Math.floor(status.score * 66.66))
-        }
-        $("#eSpan").text(status.currentQuestion.explanation)
-        let str = `${status.currentQuestion.name}`;
-        let result = str.link(`${status.currentQuestion.website}`);
-        if (append == 0) {
-            $("#delete").append(" <div id='delete'>" + result + "</div>");
-            externalLinks();
-            append = 1;
-        }
+    
+    $("#answer3").click(function(){
+        checkAnswer(2)
     })
+    
     $("#answer4").click(function() {
-        if (status.currentQuestion.answer === status.currentQuestion.choices[3] && status.clicked === false) {
-            status.i = status.i + 1;
-            points += 1;
-            status.clicked = true;
-        } else if (status.clicked === false) {
-            status.i = status.i + 1;
-            status.score *= 2;
-            status.clicked = true;
-            $("#scoreSpan").text(status.score)
-            $("#infectedSpan").text(Math.floor(status.score * 66.66))
-        }
-        $("#eSpan").text(status.currentQuestion.explanation);
-        let str = `${status.currentQuestion.name}`;
-        let result = str.link(`${status.currentQuestion.website}`);
-        if (append == 0) {
-            $("#delete").append(" <div id='delete'>" + result + "</div>");
-            externalLinks();
-            append = 1;
-        }
-
+        checkAnswer(3)
     })
     // When any answer choice is clicked
     $(".answerChoices").click(function() {
