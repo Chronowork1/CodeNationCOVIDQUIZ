@@ -287,10 +287,11 @@ $(document).ready(function() {
             $("#answer2").css("font-size", "300%");
         }
     }
+   
     
-    function checkAnswer(number){
+    $("#answer1").click(function() {
         // Check if answer is correct and if an answer choice was already clicked
-        if (status.currentQuestion.answer === status.currentQuestion.choices[number] && status.clicked === false) {
+        if (status.currentQuestion.answer === status.currentQuestion.choices[0] && status.clicked === false) {
             status.i = status.i + 1
             points += 1;
             status.clicked = true;
@@ -315,22 +316,93 @@ $(document).ready(function() {
             externalLinks();
             append = 1;
         }        
-    });
-    
-    $("#answer1").click(function() {
-        checkAnswer(0)
     })
     
     $("#answer2").click(function() {
-        checkAnswer(1)
+        // Check if answer is correct and if an answer choice was already clicked
+        if (status.currentQuestion.answer === status.currentQuestion.choices[1] && status.clicked === false) {
+            status.i = status.i + 1
+            points += 1;
+            status.clicked = true;
+        } else if (status.clicked === false) {
+            // If user got question wrong, the # of dead & # of infected increase
+            status.i = status.i + 1
+            status.score *= 2
+            status.clicked = true;
+            // # of dead
+            $("#scoreSpan").text(status.score)
+            // # of infected
+            $("#infectedSpan").text(Math.floor(status.score * 66.66))
+        }
+        // Exaplanation
+        $("#eSpan").text(status.currentQuestion.explanation)
+
+        // Website in explanation
+        let str = `${status.currentQuestion.name}`;
+        let result = str.link(`${status.currentQuestion.website}`);
+        if (append == 0) {
+            $("#delete").append(" <div id='delete'>" + result + "</div>");
+            externalLinks();
+            append = 1;
+        }        
     })
     
     $("#answer3").click(function(){
-        checkAnswer(2)
+        // Check if answer is correct and if an answer choice was already clicked
+        if (status.currentQuestion.answer === status.currentQuestion.choices[2] && status.clicked === false) {
+            status.i = status.i + 1
+            points += 1;
+            status.clicked = true;
+        } else if (status.clicked === false) {
+            // If user got question wrong, the # of dead & # of infected increase
+            status.i = status.i + 1
+            status.score *= 2
+            status.clicked = true;
+            // # of dead
+            $("#scoreSpan").text(status.score)
+            // # of infected
+            $("#infectedSpan").text(Math.floor(status.score * 66.66))
+        }
+        // Exaplanation
+        $("#eSpan").text(status.currentQuestion.explanation)
+
+        // Website in explanation
+        let str = `${status.currentQuestion.name}`;
+        let result = str.link(`${status.currentQuestion.website}`);
+        if (append == 0) {
+            $("#delete").append(" <div id='delete'>" + result + "</div>");
+            externalLinks();
+            append = 1;
+        }        
     })
     
     $("#answer4").click(function() {
-        checkAnswer(3)
+        // Check if answer is correct and if an answer choice was already clicked
+        if (status.currentQuestion.answer === status.currentQuestion.choices[3] && status.clicked === false) {
+            status.i = status.i + 1
+            points += 1;
+            status.clicked = true;
+        } else if (status.clicked === false) {
+            // If user got question wrong, the # of dead & # of infected increase
+            status.i = status.i + 1
+            status.score *= 2
+            status.clicked = true;
+            // # of dead
+            $("#scoreSpan").text(status.score)
+            // # of infected
+            $("#infectedSpan").text(Math.floor(status.score * 66.66))
+        }
+        // Exaplanation
+        $("#eSpan").text(status.currentQuestion.explanation)
+
+        // Website in explanation
+        let str = `${status.currentQuestion.name}`;
+        let result = str.link(`${status.currentQuestion.website}`);
+        if (append == 0) {
+            $("#delete").append(" <div id='delete'>" + result + "</div>");
+            externalLinks();
+            append = 1;
+        }        
     })
     // When any answer choice is clicked
     $(".answerChoices").click(function() {
